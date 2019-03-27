@@ -232,7 +232,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/django/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Aoyo">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -361,10 +361,260 @@ text[‘list’] = [
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/bootstrap-tree-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/bootstrap-tree-01/" itemprop="url">bootstrap 的 tree 扩展插件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>安装:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install bootstrap-treeview</span><br></pre></td></tr></table></figure></p>
+<p>引入:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href = <span class="string">"bootstrap.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">&lt;!-- Required Javascript --&gt;</span><br><span class="line">&lt;script src = <span class="string">"jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src = <span class="string">"bootstrap-treeview.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">数据排序:</span></span><br><span class="line"><span class="string">var list = [</span></span><br><span class="line"><span class="string">    &#123;did:1,fid:0,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点</span></span><br><span class="line"><span class="string">    &#123;did:1.1,fid:1,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点目录，父节点</span></span><br><span class="line"><span class="string">    &#123;uid:1,did:1.1,realname:''&#125;,</span></span><br><span class="line"><span class="string">    //子节点</span></span><br></pre></td></tr></table></figure></p>
+<p>bootatrap tree 会把一些字符给”吃掉”</p>
+<h5 id="生成树状图"><a href="#生成树状图" class="headerlink" title="生成树状图:"></a>生成树状图:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#tree'</span>).treeview(&#123;</span><br><span class="line">  data: tree,<span class="comment">// tree 数据</span></span><br><span class="line">  enableLinks: <span class="literal">true</span>,<span class="comment">//启用a链接</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>javascript enableLinks: true</code><br>这个就是如果有链接，就需要开启这个，不然的话不能点击</p>
+<p>想再自定义事件没有 class ，没有 ID 怎么办？，开源的东西动源码呀~也不难，在生成的标签中 attr ID = XX就可以了嘛~</p>
+<p>over~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
+<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/popover-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Aoyo">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -514,260 +764,10 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/gulp-webpack-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/gulp-webpack-01/" itemprop="url">Gulp-webpack 构建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>之前做了一个项目，使用 Gulp 进行构建，Gulp 只能说指定一个文件或者打包一些文件，这个时候好想使用 webpack 的模块化打包啊，简直不要太好用，所以我就找到了 “ gulp-webpack “</p>
-<p>安装：<br><figure class="highlight plain"><figcaption><span>install gulp-webpack```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">配置</span><br><span class="line">在 gulp 的配置方面，是有很多种的,这只是其中一种：</span><br><span class="line">```javascript</span><br><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var webpack = require(&apos;gulp-webpack&apos;);</span><br><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var webpack = require(&apos;gulp-webpack&apos;);</span><br><span class="line">gulp.task(&apos;default&apos;, function() &#123;</span><br><span class="line">  return gulp.src(&apos;src/entry.js&apos;)</span><br><span class="line">    .pipe(webpack(&#123;</span><br><span class="line">      entry: &#123;</span><br><span class="line">        app: &apos;src/app.js&apos;,</span><br><span class="line">        test: &apos;test/test.js&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      output: &#123;</span><br><span class="line">        filename: &apos;[name].js&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(&apos;dist/&apos;));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>第一个案例就完成了，你就可以 happy 的去模块化打包了</p>
-<p>思考：<br>但是 webpack 的打包也有一个硬伤，是什么？当然是多入口啊，要一个一个去指定，我要每个都写名字，这要多么麻烦？所以我就利用了 gulp 的 gulp.src 的机制</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src([<span class="string">'src/*.js'</span>])</span><br><span class="line">        .pipe(named())</span><br><span class="line">        .pipe(webpack(&#123;</span><br><span class="line">            resolve:&#123;</span><br><span class="line">                extentions:[<span class="string">""</span>,<span class="string">".js"</span>],</span><br><span class="line">                modulesDirectories: [</span><br><span class="line">                    <span class="string">'node_modules'</span>,</span><br><span class="line">                ],</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="built_in">module</span>: &#123;</span><br><span class="line">                loaders: [</span><br><span class="line">                    &#123; <span class="attr">test</span>: <span class="regexp">/\.js$/</span>, <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,<span class="attr">query</span>:&#123;<span class="attr">presets</span>:[<span class="string">'es2015'</span>]&#125;&#125;,</span><br><span class="line">                    &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span> &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(uglify()) <span class="comment">//压缩混淆 JS</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>它会自己解析 src 目录下的所有 JS 文件，这样就省得一个一个去指定 entry 了，而且我也并没有去配置 webpack.config.js<br>缺点是，gulp 只会加载 src 目录下的文件，所以我只能在 src 中建立文件夹，require 文件夹中的 JS。<br>可以直接在 gulpfile 中去配置，但是遗憾的是就不能用 webpack的pluging插件系统了，但是我觉得我的目的只是模块化，与简化入口，所以我是实现了，但是我并不知这样是否好，只是我解决一个问题的方法</p>
-<p>结尾：<br>以上就是我的使用教程啦~</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
-<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
-<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/date-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Aoyo">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -991,10 +991,10 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/bootstrap-tree-01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/gulp-webpack-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Aoyo">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -1010,7 +1010,7 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/10/bootstrap-tree-01/" itemprop="url">bootstrap 树状图实现无限极循环</a></h1>
+                <a class="post-title-link" href="/2017/03/10/gulp-webpack-01/" itemprop="url">Gulp-webpack 构建</a></h1>
         
 
         <div class="post-meta">
@@ -1062,20 +1062,511 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
       
         
           
-            <p>使用的是 bootstrap 的 tree 扩展插件<br>地址</p>
-<p>安装:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install bootstrap-treeview</span><br></pre></td></tr></table></figure></p>
-<p>引入:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href = <span class="string">"bootstrap.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">&lt;!-- Required Javascript --&gt;</span><br><span class="line">&lt;script src = <span class="string">"jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src = <span class="string">"bootstrap-treeview.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>一般简单的数据没有很多，其实直接填数据比较方便些:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tree = [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 1"</span>,</span><br><span class="line">    nodes: [</span><br><span class="line">      &#123;</span><br><span class="line">        text: <span class="string">"Child 1"</span>,</span><br><span class="line">        nodes: [</span><br><span class="line">          &#123;</span><br><span class="line">            text: <span class="string">"Grandchild 1"</span></span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            text: <span class="string">"Grandchild 2"</span></span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        text: <span class="string">"Child 2"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 2"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 3"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 4"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 5"</span></span><br><span class="line">  &#125;</span><br><span class="line">];</span><br><span class="line">小细节:</span><br><span class="line">&#123;</span><br><span class="line">  text: <span class="string">"Node 1"</span>,</span><br><span class="line">  icon: <span class="string">"glyphicon glyphicon-stop"</span>,</span><br><span class="line">  selectedIcon: <span class="string">"glyphicon glyphicon-stop"</span>,</span><br><span class="line">  color: <span class="string">"#000000"</span>,</span><br><span class="line">  backColor: <span class="string">"#FFFFFF"</span>,</span><br><span class="line">  href: <span class="string">"#node-1"</span>,</span><br><span class="line">  selectable: <span class="literal">true</span>,</span><br><span class="line">  state: &#123;</span><br><span class="line">    checked: <span class="literal">true</span>,</span><br><span class="line">    disabled: <span class="literal">true</span>,</span><br><span class="line">    expanded: <span class="literal">true</span>,</span><br><span class="line">    selected: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  tags: [<span class="string">'available'</span>],</span><br><span class="line">  nodes: [</span><br><span class="line">    &#123;&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>数据多的话，这样一点一点填几千行代码不够手酸。。。而且逻辑会很混乱，我是有惨痛经历的人。。。。</p>
-<p>无限极循环:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">genTree</span>(<span class="params">list</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temptree = [], tree = [], items = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> list) &#123;</span><br><span class="line">        <span class="keyword">var</span> href = <span class="function"><span class="keyword">function</span>(<span class="params">list</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (list.hasOwnProperty(<span class="string">"href"</span>))&#123;</span><br><span class="line">                <span class="keyword">return</span> list.href;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!temptree[list[i].did]) &#123;</span><br><span class="line">            <span class="keyword">var</span> trow = &#123;</span><br><span class="line">                id: <span class="string">'z'</span> + list[i].did,</span><br><span class="line">                did: list[i].did,</span><br><span class="line">                fid: list[i].fid,</span><br><span class="line">                text: list[i].text,</span><br><span class="line">                href: href(list[i]),</span><br><span class="line">                nodes: []</span><br><span class="line">            &#125;;</span><br><span class="line">            temptree[list[i].did] = trow;</span><br><span class="line">            items.push(trow);</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">if</span> (list[i].uid &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            temptree[list[i].did][<span class="string">'nodes'</span>].push(&#123;</span><br><span class="line">                id: list[i].uid,</span><br><span class="line">                text: list[i].realname,</span><br><span class="line">                href:href(list[i])</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j <span class="keyword">in</span> items) &#123;</span><br><span class="line">        <span class="keyword">if</span> (temptree[items[j].fid]) &#123;</span><br><span class="line">            temptree[items[j].fid][<span class="string">'nodes'</span>].push(temptree[items[j].did]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            tree.push(temptree[items[j].did]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    temptree = <span class="literal">null</span>;</span><br><span class="line">    items = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>数据排序:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> list = [</span><br><span class="line">    &#123;<span class="attr">did</span>:<span class="number">1</span>,<span class="attr">fid</span>:<span class="number">0</span>,<span class="attr">text</span>:<span class="string">''</span>&#125;,</span><br><span class="line">    <span class="comment">//根节点</span></span><br><span class="line">    &#123;<span class="attr">did</span>:<span class="number">1.1</span>,<span class="attr">fid</span>:<span class="number">1</span>,<span class="attr">text</span>:<span class="string">''</span>&#125;,</span><br><span class="line">    <span class="comment">//根节点目录，父节点</span></span><br><span class="line">    &#123;<span class="attr">uid</span>:<span class="number">1</span>,<span class="attr">did</span>:<span class="number">1.1</span>,<span class="attr">realname</span>:<span class="string">''</span>&#125;,</span><br><span class="line">    <span class="comment">//子节点</span></span><br></pre></td></tr></table></figure></p>
-<p>bootatrap tree 会把一些</p>
-<blockquote>
-<figure class="highlight plain"><figcaption><span>这个转义嘛，我就不教咯~</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">数据如果想加细节啊什么的，直接在方法里做判断就好了</span><br><span class="line">##### 生成树状图:</span><br><span class="line">```javascript</span><br><span class="line">var tree = genTree(list);</span><br><span class="line"></span><br><span class="line">$(‘#tree’).treeview(&#123;</span><br><span class="line">data: tree,// tree 数据</span><br><span class="line">enableLinks: true,//启用a链接</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><code>javascript enableLinks: true</code> 这个就是如果有链接，就需要开启这个，不然的话不能点击</p>
-<p>想再自定义事件没有 class ，没有 ID 怎么办？，开源的东西动源码呀~也不难，在生成的标签中 attr ID = XX就可以了嘛~</p>
-<p>over~</p>
+            <p>之前做了一个项目，使用 Gulp 进行构建，Gulp 只能说指定一个文件或者打包一些文件，这个时候好想使用 webpack 的模块化打包啊，简直不要太好用，所以我就找到了 “ gulp-webpack “</p>
+<p>安装：<br><figure class="highlight plain"><figcaption><span>install gulp-webpack```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">配置</span><br><span class="line">在 gulp 的配置方面，是有很多种的,这只是其中一种：</span><br><span class="line">```javascript</span><br><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var webpack = require(&apos;gulp-webpack&apos;);</span><br><span class="line">var gulp = require(&apos;gulp&apos;);</span><br><span class="line">var webpack = require(&apos;gulp-webpack&apos;);</span><br><span class="line">gulp.task(&apos;default&apos;, function() &#123;</span><br><span class="line">  return gulp.src(&apos;src/entry.js&apos;)</span><br><span class="line">    .pipe(webpack(&#123;</span><br><span class="line">      entry: &#123;</span><br><span class="line">        app: &apos;src/app.js&apos;,</span><br><span class="line">        test: &apos;test/test.js&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">      output: &#123;</span><br><span class="line">        filename: &apos;[name].js&apos;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(&apos;dist/&apos;));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>第一个案例就完成了，你就可以 happy 的去模块化打包了</p>
+<p>思考：<br>但是 webpack 的打包也有一个硬伤，是什么？当然是多入口啊，要一个一个去指定，我要每个都写名字，这要多么麻烦？所以我就利用了 gulp 的 gulp.src 的机制</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(<span class="string">'js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src([<span class="string">'src/*.js'</span>])</span><br><span class="line">        .pipe(named())</span><br><span class="line">        .pipe(webpack(&#123;</span><br><span class="line">            resolve:&#123;</span><br><span class="line">                extentions:[<span class="string">""</span>,<span class="string">".js"</span>],</span><br><span class="line">                modulesDirectories: [</span><br><span class="line">                    <span class="string">'node_modules'</span>,</span><br><span class="line">                ],</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="built_in">module</span>: &#123;</span><br><span class="line">                loaders: [</span><br><span class="line">                    &#123; <span class="attr">test</span>: <span class="regexp">/\.js$/</span>, <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,<span class="attr">query</span>:&#123;<span class="attr">presets</span>:[<span class="string">'es2015'</span>]&#125;&#125;,</span><br><span class="line">                    &#123; <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span> &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;))</span><br><span class="line">        .pipe(uglify()) <span class="comment">//压缩混淆 JS</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'dist/js'</span>));</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>它会自己解析 src 目录下的所有 JS 文件，这样就省得一个一个去指定 entry 了，而且我也并没有去配置 webpack.config.js<br>缺点是，gulp 只会加载 src 目录下的文件，所以我只能在 src 中建立文件夹，require 文件夹中的 JS。<br>可以直接在 gulpfile 中去配置，但是遗憾的是就不能用 webpack的pluging插件系统了，但是我觉得我的目的只是模块化，与简化入口，所以我是实现了，但是我并不知这样是否好，只是我解决一个问题的方法</p>
+<p>结尾：<br>以上就是我的使用教程啦~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/rn-mac-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/02/08/rn-mac-01/" itemprop="url">Mac OSX RN 环境搭建遇到的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T00:00:00+08:00">
+                2017-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>react-native init AwesomeProject 命令报错</p>
+<p>报错1：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Looks like React Native project already exists in the current</span><br><span class="line">folder. Run this command from a different folder or remove node_modules/react-native</span><br></pre></td></tr></table></figure></p>
+<p>就把 RN 全删了重新来一遍<br>rm -rf node_modules/react-native</p>
+<p>报错2：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm WARN react-native@0.41.2 requires a<span class="built_in"> peer </span>of react@~15.4.0 but none was installed.</span><br><span class="line">缺少 react@~15.4.0</span><br></pre></td></tr></table></figure></p>
+<p>解决：</p>
+<p>npm install<br>报错3：<br><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Looks like you installed react-<span class="keyword">native</span> globally, maybe you meant react-<span class="keyword">native</span>-cli? </span><br><span class="line">To fix the issue, run:</span><br></pre></td></tr></table></figure></p>
+<p>让全局安装就乖乖安装好了 –！</p>
+<p>解决：</p>
+<p>sudo npm install -g react-native-cli<br>react-native run-ios 报错<br>其实刚开始报的错是 watchman 不工作<br>之后 brew install watchman</p>
+<p>报错1：<br><figure class="highlight plain"><figcaption><span>watchman-4.7.0 already installed, it's just not linked.```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">解决：</span><br></pre></td></tr></table></figure></p>
+<p>brew link watchman<br>Linking /usr/local/Cellar/watchman/4.7.0…<br>Error: Could not symlink bin/watchman<br>Target /usr/local/bin/watchman<br>already exists. You may want to remove it:<br>  rm ‘/usr/local/bin/watchman’<br>To force the link and overwrite all conflicting files:<br>  brew link –overwrite watchman<br>To list all files that would be deleted:<br>  brew link –overwrite –dry-run watchman</p>
+<p><code>`</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/25/npm-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/25/npm-01/" itemprop="url">NPM报错 Segmentationfault:11</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-25T00:00:00+08:00">
+                2016-11-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>用n命令更新node，更新中间中断了，在执行node -v或者npm -v出现下面错误<br><figure class="highlight plain"><figcaption><span>fault: 11```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">执行n命令，没有反应，解决方法</span><br><span class="line">用n命令重新设置要使用的版本即可。</span><br><span class="line">例如</span><br><span class="line">```sudo n 5.10.1</span><br></pre></td></tr></table></figure></p>
+<p>最好不要用 N 不要用 N 不要用N 重要的事情说三遍。 去官网下载安装就好~~~~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/09/sass-02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/11/09/sass-02/" itemprop="url">Mac 安装SASS没有反应</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-09T00:00:00+08:00">
+                2016-11-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天因为配置 Webstorm 的 file watch 功能,需要安装SASS<br>因为已经安装过Ruby，所以就直接 gem install sass 但是完全没有任何反应<br>无奈ctrl +v N次 ，依旧没有任何效果，百度一下才发现,命令是没有马上回显消息的<br>安装程序其实在后台正常运行，只是控制台没有消息而已，耐心等待一段时间才会看到安装成功或者是失败的消息<br>所以其实没有任何问题，但是可以安装的时候 加上命令最后 -V 可以显示详细的日志，可以发现安装中到底有哪些问题<br>在安装过程中速度缓慢，进程停留在1%，最后报错<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"<span class="selector-tag">ERROR</span>:  <span class="selector-tag">While</span> <span class="selector-tag">executing</span> <span class="selector-tag">gem</span> ... (<span class="selector-tag">Gem</span><span class="selector-pseudo">::RemoteFetcher</span><span class="selector-pseudo">::UnknownHostError)</span></span><br></pre></td></tr></table></figure></p>
+<p>timed out (<a href="https://api.rubygems.org/gems/sass-3.4.22.gem)&quot;" target="_blank" rel="noopener">https://api.rubygems.org/gems/sass-3.4.22.gem)&quot;</a><br>百度之后，说是 gem 在国内的镜像不能用，不过还有淘宝改了其镜像，步骤如下：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>gem sources --remove <span class="symbol">https:</span>/<span class="regexp">/rubygems.org/</span></span><br><span class="line"><span class="variable">$ </span>gem sources -a <span class="symbol">https:</span>/<span class="regexp">/ruby.taobao.org/</span></span><br><span class="line"><span class="variable">$ </span>gem sources -l</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight plain"><figcaption><span>CURRENT SOURCES ***</span><a href="https://ruby.taobao.org```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">之后再进行如下命令：</span><br><span class="line">```sudo gem install sass</span><br></pre></td></tr></table></figure></p>
+<p>安装后 SASS 在Webstorm 中 commit + ， 快捷键打开设置界面 Tools 中的 file watchers 点击 + 之后需要输入一个 Program<br>因为是 MAC 找了半天也没找到 SASS安装的位置 ，可以在命令行中 which sass 可以直接显示出位置 ，将位置复制到刚在的选项中就 ok 了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/31/nginx-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/31/nginx-01/" itemprop="url">nginx 配置 location</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-31T00:00:00+08:00">
+                2016-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>安装目录下config文件夹<br>找到 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">```javascript</span><br><span class="line">upstream python_servers &#123;</span><br><span class="line">        server 8000 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125; （映射到的端口）</span><br><span class="line">    upstream h5_servers &#123;</span><br><span class="line">        server 4000 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125;</span><br><span class="line">    upstream XXX_servers &#123;</span><br><span class="line">        server 182.92.70.38:80 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80; （监听80端口）</span><br><span class="line">        server_name  www.XXX localhost; （设置访问域名）</span><br><span class="line">       location / &#123;</span><br><span class="line">            proxy_pass http://h5_servers;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break; （监听）</span><br><span class="line">        &#125;</span><br><span class="line">        location /api_python/ &#123;</span><br><span class="line">            proxy_pass http://python_servers/;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        location /XXX(检测到的字符)/ &#123;</span><br><span class="line">            proxy_pass http://cms_servers/;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>C盘 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Windows</span> <span class="selector-tag">system32</span> <span class="selector-tag">drivers</span> <span class="selector-tag">etc</span> <span class="selector-tag">host</span></span><br><span class="line">192<span class="selector-class">.168</span><span class="selector-class">.16</span><span class="selector-class">.49</span> <span class="selector-tag">WWW</span><span class="selector-class">.xxxx</span></span><br></pre></td></tr></table></figure>
+<p>指向本地</p>
 
           
         
@@ -1115,7 +1606,7 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1150,7 +1641,7 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">Aoyo</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -1161,7 +1652,7 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1206,7 +1697,7 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Aoyo</span>
 
   
 </div>

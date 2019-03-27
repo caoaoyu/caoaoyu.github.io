@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="使用的是 bootstrap 的 tree 扩展插件地址 安装:1$ bower install bootstrap-treeview 引入:1234&amp;lt;link href = &quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&amp;lt;!-- Required Javascript --&amp;gt;&amp;lt;script src = &quot;jquery.js&quot;&amp;gt;&amp;lt;/sc">
+<meta name="description" content="安装:1$ bower install bootstrap-treeview 引入:1234567891011121314&amp;lt;link href = &quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&amp;lt;!-- Required Javascript --&amp;gt;&amp;lt;script src = &quot;jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;sc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="bootstrap 树状图实现无限极循环">
+<meta property="og:title" content="bootstrap 的 tree 扩展插件">
 <meta property="og:url" content="http://yoursite.com/2017/03/10/bootstrap-tree-01/index.html">
 <meta property="og:site_name" content="小小鱼的小小梦想">
-<meta property="og:description" content="使用的是 bootstrap 的 tree 扩展插件地址 安装:1$ bower install bootstrap-treeview 引入:1234&amp;lt;link href = &quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&amp;lt;!-- Required Javascript --&amp;gt;&amp;lt;script src = &quot;jquery.js&quot;&amp;gt;&amp;lt;/sc">
+<meta property="og:description" content="安装:1$ bower install bootstrap-treeview 引入:1234567891011121314&amp;lt;link href = &quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&amp;lt;!-- Required Javascript --&amp;gt;&amp;lt;script src = &quot;jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;sc">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-16T10:17:10.522Z">
+<meta property="og:updated_time" content="2019-01-16T09:46:07.616Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="bootstrap 树状图实现无限极循环">
-<meta name="twitter:description" content="使用的是 bootstrap 的 tree 扩展插件地址 安装:1$ bower install bootstrap-treeview 引入:1234&amp;lt;link href = &quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&amp;lt;!-- Required Javascript --&amp;gt;&amp;lt;script src = &quot;jquery.js&quot;&amp;gt;&amp;lt;/sc">
+<meta name="twitter:title" content="bootstrap 的 tree 扩展插件">
+<meta name="twitter:description" content="安装:1$ bower install bootstrap-treeview 引入:1234567891011121314&amp;lt;link href = &quot;bootstrap.css&quot; rel=&quot;stylesheet&quot;&amp;gt;&amp;lt;!-- Required Javascript --&amp;gt;&amp;lt;script src = &quot;jquery.js&quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;sc">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>bootstrap 树状图实现无限极循环 | 小小鱼的小小梦想</title>
+  <title>bootstrap 的 tree 扩展插件 | 小小鱼的小小梦想</title>
   
 
 
@@ -235,7 +235,7 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/bootstrap-tree-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Aoyo">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">bootstrap 树状图实现无限极循环</h1>
+          <h1 class="post-title" itemprop="name headline">bootstrap 的 tree 扩展插件</h1>
         
 
         <div class="post-meta">
@@ -299,18 +299,11 @@
       
 
       
-        <p>使用的是 bootstrap 的 tree 扩展插件<br>地址</p>
-<p>安装:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install bootstrap-treeview</span><br></pre></td></tr></table></figure></p>
-<p>引入:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href = <span class="string">"bootstrap.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">&lt;!-- Required Javascript --&gt;</span><br><span class="line">&lt;script src = <span class="string">"jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src = <span class="string">"bootstrap-treeview.js"</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
-<p>一般简单的数据没有很多，其实直接填数据比较方便些:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tree = [</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 1"</span>,</span><br><span class="line">    nodes: [</span><br><span class="line">      &#123;</span><br><span class="line">        text: <span class="string">"Child 1"</span>,</span><br><span class="line">        nodes: [</span><br><span class="line">          &#123;</span><br><span class="line">            text: <span class="string">"Grandchild 1"</span></span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            text: <span class="string">"Grandchild 2"</span></span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">        text: <span class="string">"Child 2"</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 2"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 3"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 4"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    text: <span class="string">"Parent 5"</span></span><br><span class="line">  &#125;</span><br><span class="line">];</span><br><span class="line">小细节:</span><br><span class="line">&#123;</span><br><span class="line">  text: <span class="string">"Node 1"</span>,</span><br><span class="line">  icon: <span class="string">"glyphicon glyphicon-stop"</span>,</span><br><span class="line">  selectedIcon: <span class="string">"glyphicon glyphicon-stop"</span>,</span><br><span class="line">  color: <span class="string">"#000000"</span>,</span><br><span class="line">  backColor: <span class="string">"#FFFFFF"</span>,</span><br><span class="line">  href: <span class="string">"#node-1"</span>,</span><br><span class="line">  selectable: <span class="literal">true</span>,</span><br><span class="line">  state: &#123;</span><br><span class="line">    checked: <span class="literal">true</span>,</span><br><span class="line">    disabled: <span class="literal">true</span>,</span><br><span class="line">    expanded: <span class="literal">true</span>,</span><br><span class="line">    selected: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  tags: [<span class="string">'available'</span>],</span><br><span class="line">  nodes: [</span><br><span class="line">    &#123;&#125;,</span><br><span class="line">    ...</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>数据多的话，这样一点一点填几千行代码不够手酸。。。而且逻辑会很混乱，我是有惨痛经历的人。。。。</p>
-<p>无限极循环:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">genTree</span>(<span class="params">list</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> temptree = [], tree = [], items = [];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i <span class="keyword">in</span> list) &#123;</span><br><span class="line">        <span class="keyword">var</span> href = <span class="function"><span class="keyword">function</span>(<span class="params">list</span>)</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (list.hasOwnProperty(<span class="string">"href"</span>))&#123;</span><br><span class="line">                <span class="keyword">return</span> list.href;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!temptree[list[i].did]) &#123;</span><br><span class="line">            <span class="keyword">var</span> trow = &#123;</span><br><span class="line">                id: <span class="string">'z'</span> + list[i].did,</span><br><span class="line">                did: list[i].did,</span><br><span class="line">                fid: list[i].fid,</span><br><span class="line">                text: list[i].text,</span><br><span class="line">                href: href(list[i]),</span><br><span class="line">                nodes: []</span><br><span class="line">            &#125;;</span><br><span class="line">            temptree[list[i].did] = trow;</span><br><span class="line">            items.push(trow);</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">if</span> (list[i].uid &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            temptree[list[i].did][<span class="string">'nodes'</span>].push(&#123;</span><br><span class="line">                id: list[i].uid,</span><br><span class="line">                text: list[i].realname,</span><br><span class="line">                href:href(list[i])</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j <span class="keyword">in</span> items) &#123;</span><br><span class="line">        <span class="keyword">if</span> (temptree[items[j].fid]) &#123;</span><br><span class="line">            temptree[items[j].fid][<span class="string">'nodes'</span>].push(temptree[items[j].did]);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            tree.push(temptree[items[j].did]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    temptree = <span class="literal">null</span>;</span><br><span class="line">    items = <span class="literal">null</span>;</span><br><span class="line">    <span class="keyword">return</span> tree;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>数据排序:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> list = [</span><br><span class="line">    &#123;<span class="attr">did</span>:<span class="number">1</span>,<span class="attr">fid</span>:<span class="number">0</span>,<span class="attr">text</span>:<span class="string">''</span>&#125;,</span><br><span class="line">    <span class="comment">//根节点</span></span><br><span class="line">    &#123;<span class="attr">did</span>:<span class="number">1.1</span>,<span class="attr">fid</span>:<span class="number">1</span>,<span class="attr">text</span>:<span class="string">''</span>&#125;,</span><br><span class="line">    <span class="comment">//根节点目录，父节点</span></span><br><span class="line">    &#123;<span class="attr">uid</span>:<span class="number">1</span>,<span class="attr">did</span>:<span class="number">1.1</span>,<span class="attr">realname</span>:<span class="string">''</span>&#125;,</span><br><span class="line">    <span class="comment">//子节点</span></span><br></pre></td></tr></table></figure></p>
-<p>bootatrap tree 会把一些</p>
-<blockquote>
-<figure class="highlight plain"><figcaption><span>这个转义嘛，我就不教咯~</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">数据如果想加细节啊什么的，直接在方法里做判断就好了</span><br><span class="line">##### 生成树状图:</span><br><span class="line">```javascript</span><br><span class="line">var tree = genTree(list);</span><br><span class="line"></span><br><span class="line">$(‘#tree’).treeview(&#123;</span><br><span class="line">data: tree,// tree 数据</span><br><span class="line">enableLinks: true,//启用a链接</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p><code>javascript enableLinks: true</code> 这个就是如果有链接，就需要开启这个，不然的话不能点击</p>
+        <p>安装:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install bootstrap-treeview</span><br></pre></td></tr></table></figure></p>
+<p>引入:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href = <span class="string">"bootstrap.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">&lt;!-- Required Javascript --&gt;</span><br><span class="line">&lt;script src = <span class="string">"jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src = <span class="string">"bootstrap-treeview.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">数据排序:</span></span><br><span class="line"><span class="string">var list = [</span></span><br><span class="line"><span class="string">    &#123;did:1,fid:0,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点</span></span><br><span class="line"><span class="string">    &#123;did:1.1,fid:1,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点目录，父节点</span></span><br><span class="line"><span class="string">    &#123;uid:1,did:1.1,realname:''&#125;,</span></span><br><span class="line"><span class="string">    //子节点</span></span><br></pre></td></tr></table></figure></p>
+<p>bootatrap tree 会把一些字符给”吃掉”</p>
+<h5 id="生成树状图"><a href="#生成树状图" class="headerlink" title="生成树状图:"></a>生成树状图:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#tree'</span>).treeview(&#123;</span><br><span class="line">  data: tree,<span class="comment">// tree 数据</span></span><br><span class="line">  enableLinks: <span class="literal">true</span>,<span class="comment">//启用a链接</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>javascript enableLinks: true</code><br>这个就是如果有链接，就需要开启这个，不然的话不能点击</p>
 <p>想再自定义事件没有 class ，没有 ID 怎么办？，开源的东西动源码呀~也不难，在生成的标签中 attr ID = XX就可以了嘛~</p>
 <p>over~</p>
 
@@ -337,14 +330,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/03/10/scroll-01/" rel="next" title="固定右侧边栏">
+                <i class="fa fa-chevron-left"></i> 固定右侧边栏
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/10/date-01/" rel="prev" title="datetimepicker">
-                datetimepicker <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/16/django/" rel="prev" title="Django-error-01">
+                Django-error-01 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -397,12 +394,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">Aoyo</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -413,7 +419,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -441,6 +447,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#生成树状图"><span class="nav-number">1.</span> <span class="nav-text">生成树状图:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -458,7 +480,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Aoyo</span>
 
   
 </div>
