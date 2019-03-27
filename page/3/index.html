@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/bootstrap/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/django/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aoyo">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/16/bootstrap/" itemprop="url">checkbox 全选反选</a></h1>
+                <a class="post-title-link" href="/2017/03/16/django/" itemprop="url">Django-error-01</a></h1>
         
 
         <div class="post-meta">
@@ -300,34 +300,371 @@
       
         
           
-            <div class="checkboxs"><br> <input type="checkbox">全选<br>    <div class="increase-list"><br>        <input class="checkbox" type="checkbox">1<br>        <input class="checkbox" type="checkbox">2<br>        <input class="checkbox" type="checkbox">3<br>    </div><br></div>
+            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'dist/style/main.css'</span> could <span class="keyword">not</span> be found</span><br></pre></td></tr></table></figure>
+<p>解决：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATICFILES_DIRS =( os.path.join(BASE_DIR, <span class="string">'static'</span>), )</span><br></pre></td></tr></table></figure></p>
+<p>看看这句写对了没。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AttributeError: <span class="string">'module'</span> object has no attribute ‘login<span class="string">'</span></span><br></pre></td></tr></table></figure></p>
+<p>解决：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 定义看看哪里是不是有错</span></span><br></pre></td></tr></table></figure></p>
+<!-- django 模板 python：语法
+元组：key:value
 
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload =<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> check_all = $(<span class="string">'.checkboxs input'</span>).eq(<span class="number">0</span>);</span><br><span class="line">    check_all.click(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> boxs = $(<span class="string">'.increase-list'</span>);</span><br><span class="line">        <span class="comment">/*将所有行的选中状态设成全选框的选中状态*/</span></span><br><span class="line">        boxs.find(<span class="string">'.checkbox'</span>).prop(<span class="string">'checked'</span>,$(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>));</span><br><span class="line">        event.stopPropagation();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<script>
-window.onload =function() {
-    var check_all = $('.checkboxs input').eq(0);
-    check_all.click(function(event){
-    var boxs = $('.increase-list');
-    /*将所有行的选中状态设成全选框的选中状态*/
-    boxs.find('.checkbox').prop('checked',$(this).prop('checked'));
-    event.stopPropagation();
-    });
-}
-</script>
+```python
+text = {}
+text[‘list’] = [
+    (‘msg1’,’内容1’ ),
+    ( ‘msg2’,’内容2’ ),
+    ( ‘msg3’,’内容3’ )]
+``` -->
+          
+        
+      
+    </div>
+    
+    
+    
 
-<style>
-    .checkboxs {
-        width: 100%;
-    }
-     .increase-list{
-        margin-left: 30px;
-     }
-    .increase-list, .checkboxs {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-</style>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/date-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/date-01/" itemprop="url">datetimepicker</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>依赖</p>
+<p>需要bootstrap的下拉菜单组件 (dropdowns.less) 的某些样式，还有bootstrap的sprites (sprites.less and associated images) 中的箭头图标。</p>
+<p>一个独立的.css 文件 (包括必要的下拉列表样式和替代，基于文本的箭头) 可以通过 runningbuild/build_standalone.less 通过 lessc 编译器生成︰</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">ol</span> class=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">li</span> class=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> class=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;&lt;/span&gt;</span><br><span class="line">$ lessc build/build_standalone<span class="selector-class">.less</span> datetimepicker.css</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>选项</p>
+<p>所有需要”Date” 的选项都可以处理Date 对象; a String formatted according to the given format; or a timedelta relative to today, eg ‘-1d’, ‘+6m +1y’, etc, where valid units are ‘d’ (day), ‘w’ (week), ‘m’ (month), and ‘y’ (year).<br>也可以指定一个符合 ISO-8601 格式的日期时间，就可以忽略下面的格式：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yyyy-mm-dd</span><br><span class="line">yyyy-mm-dd hh:ii</span><br><span class="line">yyyy-mm-ddThh:ii</span><br><span class="line">yyyy-mm-dd hh:ii:ss</span><br><span class="line">yyyy-mm-ddThh:ii:ssZ</span><br><span class="line"></span><br><span class="line">format</span><br><span class="line"></span><br><span class="line">String. 默认值: ‘mm/dd/yyyy’</span><br><span class="line"></span><br><span class="line">日期格式， p, P, h, hh, i, ii, s, ss, d, dd, m, mm, M, MM, yy, yyyy 的任意组合。</span><br><span class="line"></span><br><span class="line">p : meridian in lower case (‘am’ or ‘pm’) - according to locale file</span><br><span class="line">P : meridian in upper case (‘AM’ or ‘PM’) - according to locale file</span><br><span class="line">s : seconds without leading zeros</span><br><span class="line">ss : seconds, 2 digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">i : minutes <span class="keyword">without</span> <span class="keyword">leading</span> zeros</span><br><span class="line">ii : minutes, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">h : <span class="keyword">hour</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros - <span class="number">24</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">hh : <span class="keyword">hour</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros - <span class="number">24</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">H : <span class="keyword">hour</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros - <span class="number">12</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">HH : <span class="keyword">hour</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros - <span class="number">12</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">d : <span class="keyword">day</span> <span class="keyword">of</span> the <span class="keyword">month</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros</span><br><span class="line">dd : <span class="keyword">day</span> <span class="keyword">of</span> the <span class="keyword">month</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">m : <span class="built_in">numeric</span> representation <span class="keyword">of</span> <span class="keyword">month</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros</span><br><span class="line">mm : <span class="built_in">numeric</span> representation <span class="keyword">of</span> the <span class="keyword">month</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">M : <span class="keyword">short</span> textual representation <span class="keyword">of</span> a <span class="keyword">month</span>, three letters</span><br><span class="line">MM : <span class="keyword">full</span> textual representation <span class="keyword">of</span> a <span class="keyword">month</span>, such <span class="keyword">as</span> January <span class="keyword">or</span> March</span><br><span class="line">yy : two digit representation <span class="keyword">of</span> a <span class="keyword">year</span></span><br><span class="line">yyyy : <span class="keyword">full</span> <span class="built_in">numeric</span> representation <span class="keyword">of</span> a <span class="keyword">year</span>, <span class="number">4</span> digits</span><br></pre></td></tr></table></figure></p>
+<p>weekStart</p>
+<p>Integer. 默认值：0</p>
+<p>一周从哪一天开始。0（星期日）到6（星期六）</p>
+<p>startDate</p>
+<p>Date. 默认值：开始时间</p>
+<p>The earliest date that may be selected; all earlier dates will be disabled.</p>
+<p>endDate</p>
+<p>Date. 默认值：结束时间</p>
+<p>The latest date that may be selected; all later dates will be disabled.</p>
+<p>daysOfWeekDisabled</p>
+<p>String, Array. 默认值: ‘’, []</p>
+<p>Days of the week that should be disabled. Values are 0 (Sunday) to 6 (Saturday). 多个值应该是以逗号分隔。disable weekends: ‘0,6’ or [0,6].</p>
+<p>autoclose</p>
+<p>Boolean. 默认值：false</p>
+<p>当选择一个日期之后是否立即关闭此日期时间选择器。</p>
+<p>startView</p>
+<p>Number, String. 默认值：2, ‘month’</p>
+<p>日期时间选择器打开之后首先显示的视图。 可接受的值：</p>
+<p>0 or ‘hour’ for the hour view<br>1 or ‘day’ for the day view<br>2 or ‘month’ for month view (the default)<br>3 or ‘year’ for the 12-month overview<br>4 or ‘decade’ for the 10-year overview. Useful for date-of-birth datetimepickers.</p>
+<p>minView<br>Number, String. 默认值：0, ‘hour’</p>
+<p>日期时间选择器所能够提供的最精确的时间选择视图。</p>
+<p>maxView</p>
+<p>Number, String. 默认值：4, ‘decade’</p>
+<p>日期时间选择器最高能展示的选择范围视图。</p>
+<p>todayBtn</p>
+<p>Boolean, “linked”. 默认值: false</p>
+<p>如果此值为true 或 “linked”，则在日期时间选择器组件的底部显示一个 “Today” 按钮用以选择当前日期。如果是true的话，”Today” 按钮仅仅将视图转到当天的日期，如果是”linked”，当天日期将会被选中。</p>
+<p>todayHighlight</p>
+<p>Boolean. 默认值: false</p>
+<p>如果为true, 高亮当前日期。</p>
+<p>keyboardNavigation</p>
+<p>Boolean. 默认值: true</p>
+<p>是否允许通过方向键改变日期。</p>
+<p>language</p>
+<p>String. 默认值: ‘en’</p>
+<p>语言的两个字母组成的代码，用来月份和日期名字。这些也将被用作输入的值（并随后在表单提交的情况下，发送到服务器）。目前包括英语（’en’），德国（’de’），巴西（“br”）和西班牙（es）的翻译，但其他人可以添加（见下文I18N）。如果未知语言代码给出，英语将被使用。</p>
+<p>forceParse</p>
+<p>Boolean. 默认值: true</p>
+<p>当选择器关闭的时候，是否强制解析输入框中的值。也就是说，当用户在输入框中输入了不正确的日期，选择器将会尽量解析输入的值，并将解析后的正确值按照给定的格式format设置到输入框中。</p>
+<p>minuteStep</p>
+<p>Number. 默认值: 5</p>
+<p>此数值被当做步进值用于构建小时视图。对于每个 minuteStep 都会生成一组预设时间（分钟）用于选择。</p>
+<p>pickerReferer : 不建议使用<br>String. 默认值: ‘default’ (other value available : ‘input’)</p>
+<p>The referer element to place the picker for the component implementation. If you want to place the picker just under the input field, just specify input.</p>
+<p>pickerPosition</p>
+<p>String. 默认值: ‘bottom-right’ (还支持 : ‘bottom-left’)</p>
+<p>此选项当前只在组件实现中提供支持。通过设置选项可以讲选择器放倒输入框下方。</p>
+<p>viewSelect</p>
+<p>Number or String. 默认值: same as minView (supported values are: ‘decade’, ‘year’, ‘month’, ‘day’, ‘hour’)</p>
+<p>有了这个选项，你可以选择从哪个日期将被选择的视图。默认情况下它是最后一个，但你可以选择第一个，所以在每个点击的日期将被更新。</p>
+<p>showMeridian</p>
+<p>Boolean. 默认值: false</p>
+<p>initialDate</p>
+<p>Date or String. 默认值: new Date()</p>
+<p>初始化。默认情况下，现在，这样你就可以在指定午夜昨天今天…</p>
+<p>标记<br>组件模版。<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"tag"</span> style=<span class="string">"color: rgb(0, 0, 136);"</span>&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"input-append date"</span> id=<span class="string">"datetimepicker"</span> data-date=<span class="string">"12-02-2012"</span> </span><br><span class="line"> data-date-format=<span class="string">"dd-mm-yyyy"</span>&gt;</span><br><span class="line">    &lt;input <span class="class"><span class="keyword">class</span></span>=<span class="string">"span2"</span> size=<span class="string">"16"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> value=<span class="string">"12-02-2012"</span>&gt; </span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-on"</span>&gt;</span><br><span class="line">    &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-th"</span>&gt;&lt;/i&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;            </span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">带有重置按钮（用于清空输入框）的组件模版。</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"tag"</span> style=<span class="string">"color: rgb(0, 0, 136);"</span>&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"input-append date"</span> id=<span class="string">"datetimepicker"</span> data-date=<span class="string">"12-02-2012"</span> data-date-format=<span class="string">"dd-mm-yyyy"</span>&gt;</span><br><span class="line">    &lt;input <span class="class"><span class="keyword">class</span></span>=<span class="string">"span2"</span> size=<span class="string">"16"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> value=<span class="string">"12-02-2012"</span>&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-on"</span>&gt;&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-remove"</span>&gt;&lt;/i&gt;&lt;/span&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-on"</span>&gt;&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-th"</span>&gt;&lt;/i&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;            </span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></p>
+<p>方法.datetimepicker(options)<br>初始化日期时间选择器。</p>
+<p>remove参数: None<br>移除日期时间选择器。同时移除已经绑定的event、内部绑定的对象和HTML元素。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'remove'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
+<p>show参数: None</p>
+<p>显示日期时间选择器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'show'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
+<p>hide参数: None</p>
+<p>隐藏日期时间选择器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'hide'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
+<p>update参数: None</p>
+<p>使用当前输入框中的值更新日期时间选择器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'update'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
+<p>setStartDate<br>参数:startDate (String)</p>
+<p>给日期时间选择器设置一个新的起始日期。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setStartDate&apos;, &apos;2012-01-01&apos;);</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setStartDate&apos;);</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setStartDate&apos;, null);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>setEndDate</p>
+<p>参数:endDate (String)</p>
+<p>给日期时间选择器设置结束日期。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setEndDate&apos;, &apos;2012-01-01&apos;);</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">Omit endDate (or provide an otherwise falsey value) to unset the limit.</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setEndDate&apos;);</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setEndDate&apos;, null);</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">setDaysOfWeekDisabled 参数:daysOfWeekDisabled (String|Array).</span><br><span class="line"></span><br><span class="line">class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setDaysOfWeekDisabled&apos;, [0,6]);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>省略 daysOfWeekDisabled 或提供一个值，否则为 falsey</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setDaysOfWeekDisabled&apos;);</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setDaysOfWeekDisabled&apos;, null);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>事件（Events）<br>Datetimepicker 类暴露了一组event用以对日期进行操作。</p>
+<p>show<br>当选择器显示时被触发。</p>
+<p>hide<br>当选择器隐藏时被触发。</p>
+<p>changeDate<br>当日期被改变时被触发。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#date-end&apos;)</span><br><span class="line">.datetimepicker()</span><br><span class="line">.on(&apos;changeDate&apos;, function(ev)&#123;</span><br><span class="line">    if (ev.date.valueOf() &lt; date-start-display.valueOf())&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>changeYear 当十年视图上的年视图view被改变时触发。</p>
+<p>changeMonth 当年视图上的月视图view被改变时触发。</p>
+<p>outOfRange 当用户选择的日期超出startDate 或endDate 时，或者通过setDate 或 setUTCDate方法设置日期超出范围时被触发。</p>
+<p>键盘支持<br>日期时间选择器提供了键盘导航：</p>
+<p>up, down, left, right 方向键</p>
+<p>这些方向键中，left/right 向后/向前 一天，up/down 向后/向前 一周。<br>配合shift键，up/left 向后退一个月，down/right 向前进一个月。<br>配置ctrl键，up/left 向后退一年，down/right 向前进一年。<br>Shift+ctrl 和 ctrl 同等效果 - 也就是说，他们不能同时改变月和年，只能单独改变年。</p>
+<p>escape可以用来隐藏、重新显示日期时间选择器；当用户希望手工编辑输入框中的值是会很有用。</p>
+<p>enter 当选择器处于显示状态时，enter键只是将其隐藏。当选择器处于隐藏状态时，enter键发挥通常的功能 - 提交当前表单，或者其他。</p>
+<p>I18N国际化 本插件支持月、每周中天的名称、weekStart选项的国际化。默认是语言是English (‘en’);其它可以使用的翻译文件在js/locales/ 目录中，只需在本插件之后引入需要的语言文件即可。需要增加额外语言支持的话，只需向 $.fn.datetimepicker.dates中增加一个key即可，一定要放在调用 .datetimepicker()之前。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$.fn.datetimepicker.dates[&apos;en&apos;] = &#123;</span><br><span class="line">    days: [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;],</span><br><span class="line">    daysShort: [&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;],</span><br><span class="line">    daysMin: [&quot;Su&quot;, &quot;Mo&quot;, &quot;Tu&quot;, &quot;We&quot;, &quot;Th&quot;, &quot;Fr&quot;, &quot;Sa&quot;, &quot;Su&quot;],</span><br><span class="line">    months: [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;],</span><br><span class="line">    monthsShort: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],</span><br><span class="line">    today: &quot;Today&quot;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>如果浏览器显示错误的字符，可能是浏览器加载 javascript 文件与非 unicode 编码。只需添加 charset =”UTF-8”到你的脚本标记︰</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;bootstrap-datetimepicker.de.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<p>绑定输入框，并设置format选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; value=&quot;2012-05-15 21:05&quot; id=&quot;datetimepicker&quot;&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&#123;</span><br><span class="line">    format: &apos;yyyy-mm-dd hh:ii&apos;</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>绑定输入框，并设置format标记：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; value=&quot;2012-05-15 21:05&quot; id=&quot;datetimepicker&quot; data-date-format=&quot;yyyy-mm-dd hh:ii&quot;&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker();</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>作为组件使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;div class=&quot;input-append date&quot; id=&quot;datetimepicker&quot; data-date=&quot;12-02-2012&quot; data-date-format=&quot;dd-mm-yyyy&quot;&gt;</span><br><span class="line">    &lt;input size=&quot;16&quot; type=&quot;text&quot; value=&quot;12-02-2012&quot; readonly&gt;  </span><br><span class="line">    &lt;span class=&quot;add-on&quot;&gt;</span><br><span class="line">    &lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker();</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+<p>作为内联日期时间选择器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker();</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
+<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
+
           
         
       
@@ -607,357 +944,6 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
 <p><input type="text" class="form-control" data-trigger="manual" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" 结束时间必须大于开始时间" id="dM" placeholder="请选择日期" value=""><br> <code>`</code></p>
 <p>等属性复制过去就好。</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
-<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
-<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/date-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/date-01/" itemprop="url">datetimepicker</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>依赖</p>
-<p>需要bootstrap的下拉菜单组件 (dropdowns.less) 的某些样式，还有bootstrap的sprites (sprites.less and associated images) 中的箭头图标。</p>
-<p>一个独立的.css 文件 (包括必要的下拉列表样式和替代，基于文本的箭头) 可以通过 runningbuild/build_standalone.less 通过 lessc 编译器生成︰</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">ol</span> class=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">li</span> class=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;<span class="selector-tag">span</span> class=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;&lt;/span&gt;</span><br><span class="line">$ lessc build/build_standalone<span class="selector-class">.less</span> datetimepicker.css</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>选项</p>
-<p>所有需要”Date” 的选项都可以处理Date 对象; a String formatted according to the given format; or a timedelta relative to today, eg ‘-1d’, ‘+6m +1y’, etc, where valid units are ‘d’ (day), ‘w’ (week), ‘m’ (month), and ‘y’ (year).<br>也可以指定一个符合 ISO-8601 格式的日期时间，就可以忽略下面的格式：<br><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">yyyy-mm-dd</span><br><span class="line">yyyy-mm-dd hh:ii</span><br><span class="line">yyyy-mm-ddThh:ii</span><br><span class="line">yyyy-mm-dd hh:ii:ss</span><br><span class="line">yyyy-mm-ddThh:ii:ssZ</span><br><span class="line"></span><br><span class="line">format</span><br><span class="line"></span><br><span class="line">String. 默认值: ‘mm/dd/yyyy’</span><br><span class="line"></span><br><span class="line">日期格式， p, P, h, hh, i, ii, s, ss, d, dd, m, mm, M, MM, yy, yyyy 的任意组合。</span><br><span class="line"></span><br><span class="line">p : meridian in lower case (‘am’ or ‘pm’) - according to locale file</span><br><span class="line">P : meridian in upper case (‘AM’ or ‘PM’) - according to locale file</span><br><span class="line">s : seconds without leading zeros</span><br><span class="line">ss : seconds, 2 digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">i : minutes <span class="keyword">without</span> <span class="keyword">leading</span> zeros</span><br><span class="line">ii : minutes, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">h : <span class="keyword">hour</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros - <span class="number">24</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">hh : <span class="keyword">hour</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros - <span class="number">24</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">H : <span class="keyword">hour</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros - <span class="number">12</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">HH : <span class="keyword">hour</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros - <span class="number">12</span>-<span class="keyword">hour</span> <span class="keyword">format</span></span><br><span class="line">d : <span class="keyword">day</span> <span class="keyword">of</span> the <span class="keyword">month</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros</span><br><span class="line">dd : <span class="keyword">day</span> <span class="keyword">of</span> the <span class="keyword">month</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">m : <span class="built_in">numeric</span> representation <span class="keyword">of</span> <span class="keyword">month</span> <span class="keyword">without</span> <span class="keyword">leading</span> zeros</span><br><span class="line">mm : <span class="built_in">numeric</span> representation <span class="keyword">of</span> the <span class="keyword">month</span>, <span class="number">2</span> digits <span class="keyword">with</span> <span class="keyword">leading</span> zeros</span><br><span class="line">M : <span class="keyword">short</span> textual representation <span class="keyword">of</span> a <span class="keyword">month</span>, three letters</span><br><span class="line">MM : <span class="keyword">full</span> textual representation <span class="keyword">of</span> a <span class="keyword">month</span>, such <span class="keyword">as</span> January <span class="keyword">or</span> March</span><br><span class="line">yy : two digit representation <span class="keyword">of</span> a <span class="keyword">year</span></span><br><span class="line">yyyy : <span class="keyword">full</span> <span class="built_in">numeric</span> representation <span class="keyword">of</span> a <span class="keyword">year</span>, <span class="number">4</span> digits</span><br></pre></td></tr></table></figure></p>
-<p>weekStart</p>
-<p>Integer. 默认值：0</p>
-<p>一周从哪一天开始。0（星期日）到6（星期六）</p>
-<p>startDate</p>
-<p>Date. 默认值：开始时间</p>
-<p>The earliest date that may be selected; all earlier dates will be disabled.</p>
-<p>endDate</p>
-<p>Date. 默认值：结束时间</p>
-<p>The latest date that may be selected; all later dates will be disabled.</p>
-<p>daysOfWeekDisabled</p>
-<p>String, Array. 默认值: ‘’, []</p>
-<p>Days of the week that should be disabled. Values are 0 (Sunday) to 6 (Saturday). 多个值应该是以逗号分隔。disable weekends: ‘0,6’ or [0,6].</p>
-<p>autoclose</p>
-<p>Boolean. 默认值：false</p>
-<p>当选择一个日期之后是否立即关闭此日期时间选择器。</p>
-<p>startView</p>
-<p>Number, String. 默认值：2, ‘month’</p>
-<p>日期时间选择器打开之后首先显示的视图。 可接受的值：</p>
-<p>0 or ‘hour’ for the hour view<br>1 or ‘day’ for the day view<br>2 or ‘month’ for month view (the default)<br>3 or ‘year’ for the 12-month overview<br>4 or ‘decade’ for the 10-year overview. Useful for date-of-birth datetimepickers.</p>
-<p>minView<br>Number, String. 默认值：0, ‘hour’</p>
-<p>日期时间选择器所能够提供的最精确的时间选择视图。</p>
-<p>maxView</p>
-<p>Number, String. 默认值：4, ‘decade’</p>
-<p>日期时间选择器最高能展示的选择范围视图。</p>
-<p>todayBtn</p>
-<p>Boolean, “linked”. 默认值: false</p>
-<p>如果此值为true 或 “linked”，则在日期时间选择器组件的底部显示一个 “Today” 按钮用以选择当前日期。如果是true的话，”Today” 按钮仅仅将视图转到当天的日期，如果是”linked”，当天日期将会被选中。</p>
-<p>todayHighlight</p>
-<p>Boolean. 默认值: false</p>
-<p>如果为true, 高亮当前日期。</p>
-<p>keyboardNavigation</p>
-<p>Boolean. 默认值: true</p>
-<p>是否允许通过方向键改变日期。</p>
-<p>language</p>
-<p>String. 默认值: ‘en’</p>
-<p>语言的两个字母组成的代码，用来月份和日期名字。这些也将被用作输入的值（并随后在表单提交的情况下，发送到服务器）。目前包括英语（’en’），德国（’de’），巴西（“br”）和西班牙（es）的翻译，但其他人可以添加（见下文I18N）。如果未知语言代码给出，英语将被使用。</p>
-<p>forceParse</p>
-<p>Boolean. 默认值: true</p>
-<p>当选择器关闭的时候，是否强制解析输入框中的值。也就是说，当用户在输入框中输入了不正确的日期，选择器将会尽量解析输入的值，并将解析后的正确值按照给定的格式format设置到输入框中。</p>
-<p>minuteStep</p>
-<p>Number. 默认值: 5</p>
-<p>此数值被当做步进值用于构建小时视图。对于每个 minuteStep 都会生成一组预设时间（分钟）用于选择。</p>
-<p>pickerReferer : 不建议使用<br>String. 默认值: ‘default’ (other value available : ‘input’)</p>
-<p>The referer element to place the picker for the component implementation. If you want to place the picker just under the input field, just specify input.</p>
-<p>pickerPosition</p>
-<p>String. 默认值: ‘bottom-right’ (还支持 : ‘bottom-left’)</p>
-<p>此选项当前只在组件实现中提供支持。通过设置选项可以讲选择器放倒输入框下方。</p>
-<p>viewSelect</p>
-<p>Number or String. 默认值: same as minView (supported values are: ‘decade’, ‘year’, ‘month’, ‘day’, ‘hour’)</p>
-<p>有了这个选项，你可以选择从哪个日期将被选择的视图。默认情况下它是最后一个，但你可以选择第一个，所以在每个点击的日期将被更新。</p>
-<p>showMeridian</p>
-<p>Boolean. 默认值: false</p>
-<p>initialDate</p>
-<p>Date or String. 默认值: new Date()</p>
-<p>初始化。默认情况下，现在，这样你就可以在指定午夜昨天今天…</p>
-<p>标记<br>组件模版。<br><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;&lt;/li&gt;</span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"tag"</span> style=<span class="string">"color: rgb(0, 0, 136);"</span>&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"input-append date"</span> id=<span class="string">"datetimepicker"</span> data-date=<span class="string">"12-02-2012"</span> </span><br><span class="line"> data-date-format=<span class="string">"dd-mm-yyyy"</span>&gt;</span><br><span class="line">    &lt;input <span class="class"><span class="keyword">class</span></span>=<span class="string">"span2"</span> size=<span class="string">"16"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> value=<span class="string">"12-02-2012"</span>&gt; </span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-on"</span>&gt;</span><br><span class="line">    &lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-th"</span>&gt;&lt;/i&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;            </span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">带有重置按钮（用于清空输入框）的组件模版。</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"tag"</span> style=<span class="string">"color: rgb(0, 0, 136);"</span>&gt;</span><br><span class="line">&lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"input-append date"</span> id=<span class="string">"datetimepicker"</span> data-date=<span class="string">"12-02-2012"</span> data-date-format=<span class="string">"dd-mm-yyyy"</span>&gt;</span><br><span class="line">    &lt;input <span class="class"><span class="keyword">class</span></span>=<span class="string">"span2"</span> size=<span class="string">"16"</span> <span class="class"><span class="keyword">type</span></span>=<span class="string">"text"</span> value=<span class="string">"12-02-2012"</span>&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-on"</span>&gt;&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-remove"</span>&gt;&lt;/i&gt;&lt;/span&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"add-on"</span>&gt;&lt;i <span class="class"><span class="keyword">class</span></span>=<span class="string">"icon-th"</span>&gt;&lt;/i&gt;&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;            </span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></p>
-<p>方法.datetimepicker(options)<br>初始化日期时间选择器。</p>
-<p>remove参数: None<br>移除日期时间选择器。同时移除已经绑定的event、内部绑定的对象和HTML元素。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'remove'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
-<p>show参数: None</p>
-<p>显示日期时间选择器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'show'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
-<p>hide参数: None</p>
-<p>隐藏日期时间选择器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'hide'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
-<p>update参数: None</p>
-<p>使用当前输入框中的值更新日期时间选择器。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span></span>=<span class="string">"linenums"</span> style=<span class="string">"padding: 0px; margin: 0px 0px 0px 25px;"</span>&gt;</span><br><span class="line">&lt;li <span class="class"><span class="keyword">class</span></span>=<span class="string">"L0"</span> style=<span class="string">"list-style-type: none;"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line">&lt;span <span class="class"><span class="keyword">class</span></span>=<span class="string">"pln"</span> style=<span class="string">"color: rgb(0, 0, 0);"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span>$(<span class="string">'#datetimepicker'</span>).datetimepicker(<span class="string">'update'</span>);</span><br><span class="line">&lt;<span class="regexp">/ol&gt;</span></span><br></pre></td></tr></table></figure>
-<p>setStartDate<br>参数:startDate (String)</p>
-<p>给日期时间选择器设置一个新的起始日期。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setStartDate&apos;, &apos;2012-01-01&apos;);</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setStartDate&apos;);</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setStartDate&apos;, null);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>setEndDate</p>
-<p>参数:endDate (String)</p>
-<p>给日期时间选择器设置结束日期。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setEndDate&apos;, &apos;2012-01-01&apos;);</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">Omit endDate (or provide an otherwise falsey value) to unset the limit.</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setEndDate&apos;);</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setEndDate&apos;, null);</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">setDaysOfWeekDisabled 参数:daysOfWeekDisabled (String|Array).</span><br><span class="line"></span><br><span class="line">class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setDaysOfWeekDisabled&apos;, [0,6]);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>省略 daysOfWeekDisabled 或提供一个值，否则为 falsey</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setDaysOfWeekDisabled&apos;);</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&apos;setDaysOfWeekDisabled&apos;, null);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>事件（Events）<br>Datetimepicker 类暴露了一组event用以对日期进行操作。</p>
-<p>show<br>当选择器显示时被触发。</p>
-<p>hide<br>当选择器隐藏时被触发。</p>
-<p>changeDate<br>当日期被改变时被触发。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#date-end&apos;)</span><br><span class="line">.datetimepicker()</span><br><span class="line">.on(&apos;changeDate&apos;, function(ev)&#123;</span><br><span class="line">    if (ev.date.valueOf() &lt; date-start-display.valueOf())&#123;</span><br><span class="line">      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>changeYear 当十年视图上的年视图view被改变时触发。</p>
-<p>changeMonth 当年视图上的月视图view被改变时触发。</p>
-<p>outOfRange 当用户选择的日期超出startDate 或endDate 时，或者通过setDate 或 setUTCDate方法设置日期超出范围时被触发。</p>
-<p>键盘支持<br>日期时间选择器提供了键盘导航：</p>
-<p>up, down, left, right 方向键</p>
-<p>这些方向键中，left/right 向后/向前 一天，up/down 向后/向前 一周。<br>配合shift键，up/left 向后退一个月，down/right 向前进一个月。<br>配置ctrl键，up/left 向后退一年，down/right 向前进一年。<br>Shift+ctrl 和 ctrl 同等效果 - 也就是说，他们不能同时改变月和年，只能单独改变年。</p>
-<p>escape可以用来隐藏、重新显示日期时间选择器；当用户希望手工编辑输入框中的值是会很有用。</p>
-<p>enter 当选择器处于显示状态时，enter键只是将其隐藏。当选择器处于隐藏状态时，enter键发挥通常的功能 - 提交当前表单，或者其他。</p>
-<p>I18N国际化 本插件支持月、每周中天的名称、weekStart选项的国际化。默认是语言是English (‘en’);其它可以使用的翻译文件在js/locales/ 目录中，只需在本插件之后引入需要的语言文件即可。需要增加额外语言支持的话，只需向 $.fn.datetimepicker.dates中增加一个key即可，一定要放在调用 .datetimepicker()之前。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$.fn.datetimepicker.dates[&apos;en&apos;] = &#123;</span><br><span class="line">    days: [&quot;Sunday&quot;, &quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;, &quot;Sunday&quot;],</span><br><span class="line">    daysShort: [&quot;Sun&quot;, &quot;Mon&quot;, &quot;Tue&quot;, &quot;Wed&quot;, &quot;Thu&quot;, &quot;Fri&quot;, &quot;Sat&quot;, &quot;Sun&quot;],</span><br><span class="line">    daysMin: [&quot;Su&quot;, &quot;Mo&quot;, &quot;Tu&quot;, &quot;We&quot;, &quot;Th&quot;, &quot;Fr&quot;, &quot;Sa&quot;, &quot;Su&quot;],</span><br><span class="line">    months: [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;],</span><br><span class="line">    monthsShort: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],</span><br><span class="line">    today: &quot;Today&quot;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>如果浏览器显示错误的字符，可能是浏览器加载 javascript 文件与非 unicode 编码。只需添加 charset =”UTF-8”到你的脚本标记︰</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;bootstrap-datetimepicker.de.js&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>使用</p>
-<p>绑定输入框，并设置format选项：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; value=&quot;2012-05-15 21:05&quot; id=&quot;datetimepicker&quot;&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker(&#123;</span><br><span class="line">    format: &apos;yyyy-mm-dd hh:ii&apos;</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>绑定输入框，并设置format标记：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;input type=&quot;text&quot; value=&quot;2012-05-15 21:05&quot; id=&quot;datetimepicker&quot; data-date-format=&quot;yyyy-mm-dd hh:ii&quot;&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker();</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>作为组件使用：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;tag&quot; style=&quot;color: rgb(0, 0, 136);&quot;&gt;</span><br><span class="line">&lt;div class=&quot;input-append date&quot; id=&quot;datetimepicker&quot; data-date=&quot;12-02-2012&quot; data-date-format=&quot;dd-mm-yyyy&quot;&gt;</span><br><span class="line">    &lt;input size=&quot;16&quot; type=&quot;text&quot; value=&quot;12-02-2012&quot; readonly&gt;  </span><br><span class="line">    &lt;span class=&quot;add-on&quot;&gt;</span><br><span class="line">    &lt;i class=&quot;icon-th&quot;&gt;&lt;/i&gt;</span><br><span class="line">    &lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;/ol&gt;</span><br><span class="line">&lt;ol class=&quot;linenums&quot; style=&quot;padding: 0px; margin: 0px 0px 0px 25px;&quot;&gt;</span><br><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker();</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
-<p>作为内联日期时间选择器：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;li class=&quot;L0&quot; style=&quot;list-style-type: none;&quot;&gt;&lt;/li&gt;</span><br><span class="line">&lt;span class=&quot;pln&quot; style=&quot;color: rgb(0, 0, 0);&quot;&gt;&lt;/span&gt;</span><br><span class="line">$(&apos;#datetimepicker&apos;).datetimepicker();</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure>
           
         
       
