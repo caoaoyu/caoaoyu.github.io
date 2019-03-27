@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/django/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/bootstrap/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aoyo">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/16/django/" itemprop="url">Django-error-01</a></h1>
+                <a class="post-title-link" href="/2017/03/16/bootstrap/" itemprop="url">checkbox 全选反选</a></h1>
         
 
         <div class="post-meta">
@@ -300,20 +300,34 @@
       
         
           
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'dist/style/main.css'</span> could <span class="keyword">not</span> be found</span><br></pre></td></tr></table></figure>
-<p>解决：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATICFILES_DIRS =( os.path.join(BASE_DIR, <span class="string">'static'</span>), )</span><br></pre></td></tr></table></figure></p>
-<p>看看这句写对了没。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AttributeError: <span class="string">'module'</span> object has no attribute ‘login<span class="string">'</span></span><br></pre></td></tr></table></figure></p>
-<p>解决：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 定义看看哪里是不是有错</span></span><br></pre></td></tr></table></figure></p>
-<!-- django 模板 python：语法
-元组：key:value
+            <div class="checkboxs"><br> <input type="checkbox">全选<br>    <div class="increase-list"><br>        <input class="checkbox" type="checkbox">1<br>        <input class="checkbox" type="checkbox">2<br>        <input class="checkbox" type="checkbox">3<br>    </div><br></div>
 
-```python
-text = {}
-text[‘list’] = [
-    (‘msg1’,’内容1’ ),
-    ( ‘msg2’,’内容2’ ),
-    ( ‘msg3’,’内容3’ )]
-``` -->
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload =<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> check_all = $(<span class="string">'.checkboxs input'</span>).eq(<span class="number">0</span>);</span><br><span class="line">    check_all.click(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> boxs = $(<span class="string">'.increase-list'</span>);</span><br><span class="line">        <span class="comment">/*将所有行的选中状态设成全选框的选中状态*/</span></span><br><span class="line">        boxs.find(<span class="string">'.checkbox'</span>).prop(<span class="string">'checked'</span>,$(<span class="keyword">this</span>).prop(<span class="string">'checked'</span>));</span><br><span class="line">        event.stopPropagation();</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<script>
+window.onload =function() {
+    var check_all = $('.checkboxs input').eq(0);
+    check_all.click(function(event){
+    var boxs = $('.increase-list');
+    /*将所有行的选中状态设成全选框的选中状态*/
+    boxs.find('.checkbox').prop('checked',$(this).prop('checked'));
+    event.stopPropagation();
+    });
+}
+</script>
+
+<style>
+    .checkboxs {
+        width: 100%;
+    }
+     .increase-list{
+        margin-left: 30px;
+     }
+    .increase-list, .checkboxs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
           
         
       
@@ -487,130 +501,6 @@ text[‘list’] = [
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
-<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
-<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/popover-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -716,6 +606,130 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
 <p>data-toggle=”popover” //锚点<br>data-trigger=”focus” //触发时间<br>data-content=”You are my sunshine” //气泡内容<br>例：</p>
 <p><input type="text" class="form-control" data-trigger="manual" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" 结束时间必须大于开始时间" id="dM" placeholder="请选择日期" value=""><br> <code>`</code></p>
 <p>等属性复制过去就好。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
+<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -1117,6 +1131,496 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/07/ribbon-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/07/ribbon-01/" itemprop="url">标签丝带效果</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-07T00:00:00+08:00">
+                2017-03-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="效果-1"><a href="#效果-1" class="headerlink" title="效果-1"></a>效果-1</h4><div class="ribbon"><span class="ribbon1"><span>丝带效果1</span></span></div>
+
+<style>
+ .ribbon,.ribbonTwo ,.ribbonThree,.ribbonFour,.ribbonFive,.ribbonSix {
+  width:200px;
+  height:100px;
+  background:#eee;
+  position: relative;
+  .ribbon:nth-child(even) {margin-right: 0%;}
+}
+.ribbon1 {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+}
+.ribbon1:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 53px solid transparent;
+    border-right: 53px solid transparent;
+    border-top: 10px solid #F8463F;
+}
+.ribbon1 span {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background: #F8463F;
+    font-size: 14px;
+    line-height: 1;
+    padding: 12px 8px 10px;
+    border-top-right-radius: 8px;
+    width: 90px;
+}
+.ribbon1 span:before, .ribbon1 span:after {
+    position: absolute;
+    content: "";
+    display: block;
+}
+.ribbon1 span:before {
+    background: #F8463F;
+    height: 6px;
+    width: 6px;
+    left: -6px;
+    top: 0;
+}
+.ribbon1 span:after {
+    background: #C02031;
+    height: 6px;
+    width: 8px;
+    border-radius: 8px 8px 0 0;
+    left: -8px;
+    top: 0;
+}
+.ribbon2 {
+  display: inline-block;
+  width: 60px;
+  padding: 10px 0;
+  background: #F47530;
+  top: -6px;
+  left: 25px;
+  position: absolute;
+  text-align: center;
+  border-top-left-radius: 3px;
+}
+.ribbon2:before {
+   height: 0;
+   width: 0;
+   border-bottom: 6px solid #8D5A20;
+   border-right: 6px solid transparent;
+   right: -6px;
+   top: 0;
+}
+.ribbon2:before, .ribbon2:after {
+    content: "";
+    position: absolute;
+}
+.ribbon2:after {
+    height: 0;
+    width: 0;
+    border-left: 30px solid #F47530;
+    border-right: 30px solid #F47530;
+    border-bottom: 30px solid transparent;
+    bottom: -30px;
+    left: 0;
+}
+.ribbon3 {
+  display: inline-block;
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  background: #59324C;
+  left: -8px;
+  top: 20px
+}
+.ribbon3:before, .ribbon3:after {
+    content: "";
+    position: absolute;
+}
+.ribbon3:before {
+  height: 0;
+  width: 0;
+  border-bottom: 8px solid black;
+  border-left: 8px solid transparent;
+  top: -8px;
+  left: 0;
+}
+.ribbon3:after {
+  height: 0;
+  width: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 15px solid #59324C;
+  right: -15px;
+}
+.ribbon4 {
+    position: absolute;
+    top: 15px;
+    padding: 8px 10px;
+    background: #00B3ED;
+    box-shadow: -1px 2px 4px rgba(0,0,0,0.5);
+  }
+.ribbon4:before, .ribbon4:after {
+    position: absolute;
+    content: "";
+    display: block;
+}
+.ribbon4:before {
+    width: 7px;
+    height: 100%;
+    padding: 0 0 7px;
+    top: 0;
+    left: -7px;
+    background: inherit;
+    border-radius: 5px 0 0 5px;
+}
+.ribbon4:after {
+    width: 5px;
+    height: 5px;
+    background: rgba(0,0,0,0.35);
+    bottom: -5px;
+    left: -5px;
+    border-radius: 5px 0 0 5px;
+ }
+.ribbon5 {
+  display: inline-block;
+  width: calc(100% + 20px);
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin-left: -10px;
+  margin-right: -10px;
+  background: #EDBA19;
+  position: relative;
+  top: 20px;
+}
+.ribbon5:before {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 10px solid #cd8d11;
+  border-left: 10px solid transparent;
+  bottom: -10px;
+  left: 0;
+}
+.ribbon5:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border-top: 10px solid #cd8d11;
+  border-right: 10px solid transparent;
+  right: 0;
+  bottom: -10px;
+}
+.ribbonSix {
+  width: 300px;
+  height: 158px;
+  position: relative;
+  top: -8px;
+  left: 8px;
+  overflow: hidden;
+}
+.ribbonSix:before {
+    content: "";
+    display: block;
+    border-radius: 8px 8px 0px 0px;
+    width: 40px;
+    height: 8px;
+    position: absolute;
+    right: 100px;
+    background: #4D6530;
+}
+.ribbonSix:after {
+    content: "";
+    display: block;
+    border-radius: 0px 8px 8px 0px;
+    width: 8px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 100px;
+    background: #4D6530;
+}
+.ribbon6 {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 30px;
+  right: -50px;
+  z-index: 2;
+  overflow: hidden;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  border: 1px dashed;
+  box-shadow:0 0 0 3px #57DD43,  0px 21px 5px -18px rgba(0,0,0,0.6);
+ background: #57DD43;
+}
+</style>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"ribbon"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"ribbon1"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span>&gt;</span>丝带效果1<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ribbon1</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: -<span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">10px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon1</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">53px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">53px</span> solid transparent;</span><br><span class="line">    <span class="attribute">border-top</span>: <span class="number">10px</span> solid <span class="number">#F8463F</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon1</span> <span class="selector-tag">span</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">display</span>: inline-block;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#F8463F</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">14px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">12px</span> <span class="number">8px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">border-top-right-radius</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">90px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon1</span> <span class="selector-tag">span</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.ribbon1</span> <span class="selector-tag">span</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon1</span> <span class="selector-tag">span</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#F8463F</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon1</span> <span class="selector-tag">span</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#C02031</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">6px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">8px</span> <span class="number">8px</span> <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="效果-2"><a href="#效果-2" class="headerlink" title="效果-2"></a>效果-2</h4><div class="ribbonTwo"><span class="ribbon2"><span>丝带效果2</span></span></div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ribbon2</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">60px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#F47530</span>;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">6px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">25px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">border-top-left-radius</span>: <span class="number">3px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon2</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">   <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">   <span class="attribute">border-bottom</span>: <span class="number">6px</span> solid <span class="number">#8D5A20</span>;</span><br><span class="line">   <span class="attribute">border-right</span>: <span class="number">6px</span> solid transparent;</span><br><span class="line">   <span class="attribute">right</span>: -<span class="number">6px</span>;</span><br><span class="line">   <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon2</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.ribbon2</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon2</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">30px</span> solid <span class="number">#F47530</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">30px</span> solid <span class="number">#F47530</span>;</span><br><span class="line">    <span class="attribute">border-bottom</span>: <span class="number">30px</span> solid transparent;</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">30px</span>;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="效果-3"><a href="#效果-3" class="headerlink" title="效果-3"></a>效果-3</h4><div class="ribbonThree"><span class="ribbon3"><span>丝带效果3</span></span></div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ribbon3</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">padding-left</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#59324C</span>;</span><br><span class="line">  <span class="attribute">left</span>: -<span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">20px</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon3</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.ribbon3</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon3</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">8px</span> solid black;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">8px</span> solid transparent;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon3</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">25px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-bottom</span>: <span class="number">25px</span> solid transparent;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">15px</span> solid <span class="number">#59324C</span>;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="效果-4"><a href="#效果-4" class="headerlink" title="效果-4"></a>效果-4</h4><div class="ribbonFour"><span class="ribbon4"><span>丝带效果4</span></span></div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ribbon4</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">8px</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#00B3ED</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: -<span class="number">1px</span> <span class="number">2px</span> <span class="number">4px</span> <span class="built_in">rgba</span>(0,0,0,0.5);</span><br><span class="line">  &#125;</span><br><span class="line"><span class="selector-class">.ribbon4</span><span class="selector-pseudo">:before</span>, <span class="selector-class">.ribbon4</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon4</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">7px</span>;</span><br><span class="line">    <span class="attribute">background</span>: inherit;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon4</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(0,0,0,0.35);</span><br><span class="line">    <span class="attribute">bottom</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">5px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">5px</span> <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span>;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="效果-5"><a href="#效果-5" class="headerlink" title="效果-5"></a>效果-5</h4><div class="ribbonFive"><span class="ribbon5"><span>丝带效果5</span></span></div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ribbon5</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="built_in">calc</span>(100% + 20px);</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin-left</span>: -<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">margin-right</span>: -<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="number">#EDBA19</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon5</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">10px</span> solid <span class="number">#cd8d11</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">10px</span> solid transparent;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">10px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon5</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-top</span>: <span class="number">10px</span> solid <span class="number">#cd8d11</span>;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">10px</span> solid transparent;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: -<span class="number">10px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="效果-6"><a href="#效果-6" class="headerlink" title="效果-6"></a>效果-6</h4><div class="ribbonSix"><span class="ribbon6"><span>丝带效果6</span></span></div>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.ribbonSix</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">300px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">158px</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">top</span>: -<span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">8px</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbonSix</span><span class="selector-pseudo">:before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">8px</span> <span class="number">8px</span> <span class="number">0px</span> <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#4D6530</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbonSix</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">0px</span> <span class="number">8px</span> <span class="number">8px</span> <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">right</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#4D6530</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.ribbon6</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">40px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">30px</span>;</span><br><span class="line">  <span class="attribute">right</span>: -<span class="number">50px</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">2</span>;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">-ms-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">-moz-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">-webkit-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">-o-transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> dashed;</span><br><span class="line">  <span class="attribute">box-shadow</span>:<span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">3px</span> <span class="number">#57DD43</span>,  <span class="number">0px</span> <span class="number">21px</span> <span class="number">5px</span> -<span class="number">18px</span> <span class="built_in">rgba</span>(0,0,0,0.6);</span><br><span class="line"> <span class="attribute">background</span>: <span class="number">#57DD43</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/input-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/02/08/input-01/" itemprop="url">阻止 input 默认提交事件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-08T00:00:00+08:00">
+                2017-02-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>总结几条默认事件：<br>1、 如果表单里有一个 type=”submit” 的按钮，或者只有一个 type=”text” 的input ，不管按钮是什么type,回车键生效。</p>
+<figure class="highlight plain"><figcaption><span>id</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    &lt;input type=&quot;text&quot; name=&quot;t1&quot; /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>2、 如果按钮是用 button ，并且没有加 type，默认 type=”submit” 。</p>
+<figure class="highlight plain"><figcaption><span>id</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">    &lt;input type=&quot;text&quot; name=&quot;t1&quot; /&gt;</span><br><span class="line">     &lt;button&gt;提交&lt;/button&gt;  </span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<p>阻止事件 例：</p>
+<figure class="highlight plain"><figcaption><span>&#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">                if (e.keyCode == 13) &#123;</span><br><span class="line">                    e.preventDefault();</span><br><span class="line">                    // return false;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">&lt;form name=&quot;myform&quot; action=&quot;&quot; onkeydown=&quot;if(event.keyCode==13)&#123;return false;&#125;&quot;&gt;</span><br><span class="line">&lt;input type=text name=user&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/02/08/rn-mac-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1356,257 +1860,11 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/09/sass-02/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/11/09/sass-02/" itemprop="url">Mac 安装SASS没有反应</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-09T00:00:00+08:00">
-                2016-11-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天因为配置 Webstorm 的 file watch 功能,需要安装SASS<br>因为已经安装过Ruby，所以就直接 gem install sass 但是完全没有任何反应<br>无奈ctrl +v N次 ，依旧没有任何效果，百度一下才发现,命令是没有马上回显消息的<br>安装程序其实在后台正常运行，只是控制台没有消息而已，耐心等待一段时间才会看到安装成功或者是失败的消息<br>所以其实没有任何问题，但是可以安装的时候 加上命令最后 -V 可以显示详细的日志，可以发现安装中到底有哪些问题<br>在安装过程中速度缓慢，进程停留在1%，最后报错<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"<span class="selector-tag">ERROR</span>:  <span class="selector-tag">While</span> <span class="selector-tag">executing</span> <span class="selector-tag">gem</span> ... (<span class="selector-tag">Gem</span><span class="selector-pseudo">::RemoteFetcher</span><span class="selector-pseudo">::UnknownHostError)</span></span><br></pre></td></tr></table></figure></p>
-<p>timed out (<a href="https://api.rubygems.org/gems/sass-3.4.22.gem)&quot;" target="_blank" rel="noopener">https://api.rubygems.org/gems/sass-3.4.22.gem)&quot;</a><br>百度之后，说是 gem 在国内的镜像不能用，不过还有淘宝改了其镜像，步骤如下：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>gem sources --remove <span class="symbol">https:</span>/<span class="regexp">/rubygems.org/</span></span><br><span class="line"><span class="variable">$ </span>gem sources -a <span class="symbol">https:</span>/<span class="regexp">/ruby.taobao.org/</span></span><br><span class="line"><span class="variable">$ </span>gem sources -l</span><br></pre></td></tr></table></figure></p>
-<p>结果：<br><figure class="highlight plain"><figcaption><span>CURRENT SOURCES ***</span><a href="https://ruby.taobao.org```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">之后再进行如下命令：</span><br><span class="line">```sudo gem install sass</span><br></pre></td></tr></table></figure></p>
-<p>安装后 SASS 在Webstorm 中 commit + ， 快捷键打开设置界面 Tools 中的 file watchers 点击 + 之后需要输入一个 Program<br>因为是 MAC 找了半天也没找到 SASS安装的位置 ，可以在命令行中 which sass 可以直接显示出位置 ，将位置复制到刚在的选项中就 ok 了。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/31/nginx-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/31/nginx-01/" itemprop="url">nginx 配置 location</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-31T00:00:00+08:00">
-                2016-10-31
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>安装目录下config文件夹<br>找到 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">```javascript</span><br><span class="line">upstream python_servers &#123;</span><br><span class="line">        server 8000 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125; （映射到的端口）</span><br><span class="line">    upstream h5_servers &#123;</span><br><span class="line">        server 4000 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125;</span><br><span class="line">    upstream XXX_servers &#123;</span><br><span class="line">        server 182.92.70.38:80 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80; （监听80端口）</span><br><span class="line">        server_name  www.XXX localhost; （设置访问域名）</span><br><span class="line">       location / &#123;</span><br><span class="line">            proxy_pass http://h5_servers;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break; （监听）</span><br><span class="line">        &#125;</span><br><span class="line">        location /api_python/ &#123;</span><br><span class="line">            proxy_pass http://python_servers/;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        location /XXX(检测到的字符)/ &#123;</span><br><span class="line">            proxy_pass http://cms_servers/;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
-<p>C盘 </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Windows</span> <span class="selector-tag">system32</span> <span class="selector-tag">drivers</span> <span class="selector-tag">etc</span> <span class="selector-tag">host</span></span><br><span class="line">192<span class="selector-class">.168</span><span class="selector-class">.16</span><span class="selector-class">.49</span> <span class="selector-tag">WWW</span><span class="selector-class">.xxxx</span></span><br></pre></td></tr></table></figure>
-<p>指向本地</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1652,7 +1910,7 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

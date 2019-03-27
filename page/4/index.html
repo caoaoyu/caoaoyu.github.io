@@ -229,7 +229,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/10/date-02/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/11/09/sass-02/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aoyo">
@@ -248,7 +248,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2016/10/10/date-02/" itemprop="url">如何实现时间相减得到所需时差</a></h1>
+                <a class="post-title-link" href="/2016/11/09/sass-02/" itemprop="url">Mac 安装SASS没有反应</a></h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-10T00:00:00+08:00">
-                2016-10-10
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-11-09T00:00:00+08:00">
+                2016-11-09
               </time>
             
 
@@ -300,7 +300,134 @@
       
         
           
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">order_time</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> now_time = moment().format(<span class="string">'X'</span>); <span class="comment">//moment.js 日期插件</span></span><br><span class="line">    <span class="keyword">var</span> time = time;</span><br><span class="line">    <span class="keyword">var</span> total = (time - now_time); </span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">parseInt</span>(total / (<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数天数</span></span><br><span class="line">    <span class="keyword">var</span> afterDay = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出天数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> hour = <span class="built_in">parseInt</span>(afterDay/(<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数小时数</span></span><br><span class="line">    <span class="keyword">var</span> afterHour = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出小时数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> min = <span class="built_in">parseInt</span>(afterHour/<span class="number">60</span>);<span class="comment">//计算整数分</span></span><br><span class="line">    <span class="keyword">var</span> afterMin = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span> - min*<span class="number">60</span>;<span class="comment">//取得算出分后剩余的秒数</span></span><br><span class="line">    <span class="built_in">console</span>.log([day,hour,min,afterMin].join(<span class="string">':'</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>今天因为配置 Webstorm 的 file watch 功能,需要安装SASS<br>因为已经安装过Ruby，所以就直接 gem install sass 但是完全没有任何反应<br>无奈ctrl +v N次 ，依旧没有任何效果，百度一下才发现,命令是没有马上回显消息的<br>安装程序其实在后台正常运行，只是控制台没有消息而已，耐心等待一段时间才会看到安装成功或者是失败的消息<br>所以其实没有任何问题，但是可以安装的时候 加上命令最后 -V 可以显示详细的日志，可以发现安装中到底有哪些问题<br>在安装过程中速度缓慢，进程停留在1%，最后报错<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"<span class="selector-tag">ERROR</span>:  <span class="selector-tag">While</span> <span class="selector-tag">executing</span> <span class="selector-tag">gem</span> ... (<span class="selector-tag">Gem</span><span class="selector-pseudo">::RemoteFetcher</span><span class="selector-pseudo">::UnknownHostError)</span></span><br></pre></td></tr></table></figure></p>
+<p>timed out (<a href="https://api.rubygems.org/gems/sass-3.4.22.gem)&quot;" target="_blank" rel="noopener">https://api.rubygems.org/gems/sass-3.4.22.gem)&quot;</a><br>百度之后，说是 gem 在国内的镜像不能用，不过还有淘宝改了其镜像，步骤如下：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>gem sources --remove <span class="symbol">https:</span>/<span class="regexp">/rubygems.org/</span></span><br><span class="line"><span class="variable">$ </span>gem sources -a <span class="symbol">https:</span>/<span class="regexp">/ruby.taobao.org/</span></span><br><span class="line"><span class="variable">$ </span>gem sources -l</span><br></pre></td></tr></table></figure></p>
+<p>结果：<br><figure class="highlight plain"><figcaption><span>CURRENT SOURCES ***</span><a href="https://ruby.taobao.org```" target="_blank" rel="noopener">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">之后再进行如下命令：</span><br><span class="line">```sudo gem install sass</span><br></pre></td></tr></table></figure></p>
+<p>安装后 SASS 在Webstorm 中 commit + ， 快捷键打开设置界面 Tools 中的 file watchers 点击 + 之后需要输入一个 Program<br>因为是 MAC 找了半天也没找到 SASS安装的位置 ，可以在命令行中 which sass 可以直接显示出位置 ，将位置复制到刚在的选项中就 ok 了。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/31/nginx-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/31/nginx-01/" itemprop="url">nginx 配置 location</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-31T00:00:00+08:00">
+                2016-10-31
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>安装目录下config文件夹<br>找到 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">```javascript</span><br><span class="line">upstream python_servers &#123;</span><br><span class="line">        server 8000 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125; （映射到的端口）</span><br><span class="line">    upstream h5_servers &#123;</span><br><span class="line">        server 4000 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125;</span><br><span class="line">    upstream XXX_servers &#123;</span><br><span class="line">        server 182.92.70.38:80 max_fails=2 fail_timeout=10s;</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80; （监听80端口）</span><br><span class="line">        server_name  www.XXX localhost; （设置访问域名）</span><br><span class="line">       location / &#123;</span><br><span class="line">            proxy_pass http://h5_servers;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break; （监听）</span><br><span class="line">        &#125;</span><br><span class="line">        location /api_python/ &#123;</span><br><span class="line">            proxy_pass http://python_servers/;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        location /XXX(检测到的字符)/ &#123;</span><br><span class="line">            proxy_pass http://cms_servers/;</span><br><span class="line">            include proxy/proxy.conf;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">        error_page   500 502 503 504  /50x.html;</span><br><span class="line">        location = /50x.html &#123;</span><br><span class="line">            root   html;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>C盘 </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Windows</span> <span class="selector-tag">system32</span> <span class="selector-tag">drivers</span> <span class="selector-tag">etc</span> <span class="selector-tag">host</span></span><br><span class="line">192<span class="selector-class">.168</span><span class="selector-class">.16</span><span class="selector-class">.49</span> <span class="selector-tag">WWW</span><span class="selector-class">.xxxx</span></span><br></pre></td></tr></table></figure>
+<p>指向本地</p>
+
           
         
       
@@ -421,6 +548,125 @@
           
             <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function order_time(time)&#123;</span><br><span class="line">    var now_time = moment().format(<span class="string">'X'</span>); <span class="comment">//moment.js 日期插件</span></span><br><span class="line">    time = time,</span><br><span class="line">    total = (time - now_time), </span><br><span class="line">    <span class="built_in">day</span> = parseInt(total / (<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>)),<span class="comment">//计算整数天数</span></span><br><span class="line">    afterDay = total - <span class="built_in">day</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>,<span class="comment">//取得算出天数后剩余的秒数</span></span><br><span class="line">    <span class="built_in">hour</span> = parseInt(afterDay/(<span class="number">60</span>*<span class="number">60</span>)),<span class="comment">//计算整数小时数</span></span><br><span class="line">    afterHour = total - <span class="built_in">day</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - <span class="built_in">hour</span>*<span class="number">60</span>*<span class="number">60</span>,<span class="comment">//取得算出小时数后剩余的秒数</span></span><br><span class="line">    <span class="built_in">min</span> = parseInt(afterHour/<span class="number">60</span>),<span class="comment">//计算整数分</span></span><br><span class="line">    afterMin = total - <span class="built_in">day</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - <span class="built_in">hour</span>*<span class="number">60</span>*<span class="number">60</span> - <span class="built_in">min</span>*<span class="number">60</span>;<span class="comment">//取得算出分后剩余的秒数</span></span><br><span class="line">    console.<span class="built_in">log</span>([<span class="built_in">day</span>,<span class="built_in">hour</span>,<span class="built_in">min</span>,afterMin].<span class="built_in">join</span>(<span class="string">':'</span>))</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/10/date-02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/10/date-02/" itemprop="url">如何实现时间相减得到所需时差</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-10T00:00:00+08:00">
+                2016-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">order_time</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> now_time = moment().format(<span class="string">'X'</span>); <span class="comment">//moment.js 日期插件</span></span><br><span class="line">    <span class="keyword">var</span> time = time;</span><br><span class="line">    <span class="keyword">var</span> total = (time - now_time); </span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">parseInt</span>(total / (<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数天数</span></span><br><span class="line">    <span class="keyword">var</span> afterDay = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出天数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> hour = <span class="built_in">parseInt</span>(afterDay/(<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数小时数</span></span><br><span class="line">    <span class="keyword">var</span> afterHour = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出小时数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> min = <span class="built_in">parseInt</span>(afterHour/<span class="number">60</span>);<span class="comment">//计算整数分</span></span><br><span class="line">    <span class="keyword">var</span> afterMin = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span> - min*<span class="number">60</span>;<span class="comment">//取得算出分后剩余的秒数</span></span><br><span class="line">    <span class="built_in">console</span>.log([day,hour,min,afterMin].join(<span class="string">':'</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1215,135 +1461,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/08/01/css-br/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/08/01/css-br/" itemprop="url">如何给br加宽高背景等颜色</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-08-01T00:00:00+08:00">
-                2016-08-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">换行换行换行换行</span><br><span class="line"><span class="tag">&lt;<span class="name">br</span>/&gt;</span></span><br><span class="line">换行换行换行换行</span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">br</span>&#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">" "</span>;</span><br><span class="line">    <span class="attribute">display</span>: block;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">10px</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">40px</span>;</span><br><span class="line">    <span class="attribute">height</span>:<span class="number">50px</span>;</span><br><span class="line">    <span class="attribute">line-height</span>:<span class="number">22px</span>;</span><br><span class="line">    <span class="attribute">background-color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>利用content的内容属性 将br变成一个框，如此便可设置颜色宽高等样式</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1389,7 +1511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-count">41</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
