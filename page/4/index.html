@@ -475,125 +475,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/10/date-02/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/10/10/date-02/" itemprop="url">如何实现时间相减得到所需时差</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-10T00:00:00+08:00">
-                2016-10-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">order_time</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> now_time = moment().format(<span class="string">'X'</span>); <span class="comment">//moment.js 日期插件</span></span><br><span class="line">    <span class="keyword">var</span> time = time;</span><br><span class="line">    <span class="keyword">var</span> total = (time - now_time); </span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">parseInt</span>(total / (<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数天数</span></span><br><span class="line">    <span class="keyword">var</span> afterDay = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出天数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> hour = <span class="built_in">parseInt</span>(afterDay/(<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数小时数</span></span><br><span class="line">    <span class="keyword">var</span> afterHour = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出小时数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> min = <span class="built_in">parseInt</span>(afterHour/<span class="number">60</span>);<span class="comment">//计算整数分</span></span><br><span class="line">    <span class="keyword">var</span> afterMin = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span> - min*<span class="number">60</span>;<span class="comment">//取得算出分后剩余的秒数</span></span><br><span class="line">    <span class="built_in">console</span>.log([day,hour,min,afterMin].join(<span class="string">':'</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/10/jquery-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -667,6 +548,125 @@
           
             <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function order_time(time)&#123;</span><br><span class="line">    var now_time = moment().format(<span class="string">'X'</span>); <span class="comment">//moment.js 日期插件</span></span><br><span class="line">    time = time,</span><br><span class="line">    total = (time - now_time), </span><br><span class="line">    <span class="built_in">day</span> = parseInt(total / (<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>)),<span class="comment">//计算整数天数</span></span><br><span class="line">    afterDay = total - <span class="built_in">day</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>,<span class="comment">//取得算出天数后剩余的秒数</span></span><br><span class="line">    <span class="built_in">hour</span> = parseInt(afterDay/(<span class="number">60</span>*<span class="number">60</span>)),<span class="comment">//计算整数小时数</span></span><br><span class="line">    afterHour = total - <span class="built_in">day</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - <span class="built_in">hour</span>*<span class="number">60</span>*<span class="number">60</span>,<span class="comment">//取得算出小时数后剩余的秒数</span></span><br><span class="line">    <span class="built_in">min</span> = parseInt(afterHour/<span class="number">60</span>),<span class="comment">//计算整数分</span></span><br><span class="line">    afterMin = total - <span class="built_in">day</span>*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - <span class="built_in">hour</span>*<span class="number">60</span>*<span class="number">60</span> - <span class="built_in">min</span>*<span class="number">60</span>;<span class="comment">//取得算出分后剩余的秒数</span></span><br><span class="line">    console.<span class="built_in">log</span>([<span class="built_in">day</span>,<span class="built_in">hour</span>,<span class="built_in">min</span>,afterMin].<span class="built_in">join</span>(<span class="string">':'</span>))</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/10/date-02/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/10/10/date-02/" itemprop="url">如何实现时间相减得到所需时差</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-10T00:00:00+08:00">
+                2016-10-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">order_time</span>(<span class="params">time</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> now_time = moment().format(<span class="string">'X'</span>); <span class="comment">//moment.js 日期插件</span></span><br><span class="line">    <span class="keyword">var</span> time = time;</span><br><span class="line">    <span class="keyword">var</span> total = (time - now_time); </span><br><span class="line">    <span class="keyword">var</span> day = <span class="built_in">parseInt</span>(total / (<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数天数</span></span><br><span class="line">    <span class="keyword">var</span> afterDay = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出天数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> hour = <span class="built_in">parseInt</span>(afterDay/(<span class="number">60</span>*<span class="number">60</span>));<span class="comment">//计算整数小时数</span></span><br><span class="line">    <span class="keyword">var</span> afterHour = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span>;<span class="comment">//取得算出小时数后剩余的秒数</span></span><br><span class="line">    <span class="keyword">var</span> min = <span class="built_in">parseInt</span>(afterHour/<span class="number">60</span>);<span class="comment">//计算整数分</span></span><br><span class="line">    <span class="keyword">var</span> afterMin = total - day*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span> - hour*<span class="number">60</span>*<span class="number">60</span> - min*<span class="number">60</span>;<span class="comment">//取得算出分后剩余的秒数</span></span><br><span class="line">    <span class="built_in">console</span>.log([day,hour,min,afterMin].join(<span class="string">':'</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -839,126 +839,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/28/brower-keys/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/09/28/brower-keys/" itemprop="url">sublime - 浏览器快捷键绑定</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-28T00:00:00+08:00">
-                2016-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>首先打开 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">按键绑定 – 用户</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">[ </span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;ctrl+shift+c&quot;], &quot;command&quot;: &quot;copy_path&quot; &#125;, </span><br><span class="line">    //firefox </span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;f1&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;:</span><br><span class="line">    &#123; &quot;paths&quot;: [], &quot;application&quot;: &quot;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe&quot;, </span><br><span class="line">    //浏览器地址</span><br><span class="line">    &quot;extensions&quot;:&quot;.*&quot; //匹配任何文件类型 </span><br><span class="line">    &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    //chrome </span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;:</span><br><span class="line">    &#123; &quot;paths&quot;: [], &quot;application&quot;: &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot;, &quot;extensions&quot;:&quot;.*&quot; //匹配任何文件类型 </span><br><span class="line">    &#125;</span><br><span class="line">    &#125; </span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/28/sublime-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1033,6 +913,126 @@
             <ol>
 <li>首先打开 Preferences –&gt; 按键绑定 – 用户<figure class="highlight clojure"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[ &#123; <span class="string">"keys"</span>: [<span class="string">"ctrl+shift+c"</span>], <span class="string">"command"</span>: <span class="string">"copy_path"</span> &#125;, </span><br><span class="line">//firefox </span><br><span class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"f1"</span>], <span class="string">"command"</span>: <span class="string">"side_bar_files_open_with"</span>, <span class="string">"args"</span>:</span><br><span class="line"> &#123; <span class="string">"paths"</span>: [], <span class="string">"application"</span>: <span class="string">"C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe"</span>, </span><br><span class="line">//浏览器地址</span><br><span class="line"> <span class="string">"extensions"</span>:<span class="string">".*"</span> //匹配任何文件类型 </span><br><span class="line"> &#125;</span><br><span class="line">&#125;,</span><br><span class="line">  //chrome </span><br><span class="line">&#123; <span class="string">"keys"</span>: [<span class="string">"f2"</span>], <span class="string">"command"</span>: <span class="string">"side_bar_files_open_with"</span>, <span class="string">"args"</span>:</span><br><span class="line"> &#123; <span class="string">"paths"</span>: [], <span class="string">"application"</span>: <span class="string">"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"</span>, <span class="string">"extensions"</span>:<span class="string">".*"</span> //匹配任何文件类型 </span><br><span class="line"> &#125;</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure></li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/09/28/brower-keys/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/09/28/brower-keys/" itemprop="url">sublime - 浏览器快捷键绑定</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-09-28T00:00:00+08:00">
+                2016-09-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>首先打开 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">按键绑定 – 用户</span><br><span class="line"></span><br><span class="line">```javascript</span><br><span class="line">[ </span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;ctrl+shift+c&quot;], &quot;command&quot;: &quot;copy_path&quot; &#125;, </span><br><span class="line">    //firefox </span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;f1&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;:</span><br><span class="line">    &#123; &quot;paths&quot;: [], &quot;application&quot;: &quot;C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe&quot;, </span><br><span class="line">    //浏览器地址</span><br><span class="line">    &quot;extensions&quot;:&quot;.*&quot; //匹配任何文件类型 </span><br><span class="line">    &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    //chrome </span><br><span class="line">    &#123; &quot;keys&quot;: [&quot;f2&quot;], &quot;command&quot;: &quot;side_bar_files_open_with&quot;, &quot;args&quot;:</span><br><span class="line">    &#123; &quot;paths&quot;: [], &quot;application&quot;: &quot;C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe&quot;, &quot;extensions&quot;:&quot;.*&quot; //匹配任何文件类型 </span><br><span class="line">    &#125;</span><br><span class="line">    &#125; </span><br><span class="line">]</span><br></pre></td></tr></table></figure></p>
 
           
         
