@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -83,7 +83,7 @@
 <meta property="og:title" content="小小鱼的小小梦想">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="小小鱼的小小梦想">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小小鱼的小小梦想">
 
@@ -101,7 +101,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: '博主'
+      author: 'Author'
     },
     algolia: {
       applicationID: '',
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -182,7 +182,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
-            首页
+            Home
           </a>
         </li>
       
@@ -192,7 +192,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
-            标签
+            Tags
           </a>
         </li>
       
@@ -202,7 +202,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
-            分类
+            Categories
           </a>
         </li>
       
@@ -212,7 +212,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
-            归档
+            Archives
           </a>
         </li>
       
@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/oh-my-zsh/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/canvas-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aoyo">
@@ -268,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/13/oh-my-zsh/" itemprop="url">source ~/.zshrc  autoload: command not found</a></h1>
+                <a class="post-title-link" href="/2019/05/23/canvas-01/" itemprop="url">canvas弧形描边渐变</a></h1>
         
 
         <div class="post-meta">
@@ -278,10 +278,392 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-13T14:10:57+08:00">
-                2018-11-13
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-05-23T00:00:00+08:00">
+                2019-05-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <canvas id="canvas" width="200" height="200"><br></canvas>
+
+<script type="text/javascript">
+window.addEventListener('load',canvasApp,false);
+function canvasApp(){
+    var theCanvas = document.getElementById('canvas')
+       var context = theCanvas.getContext("2d")
+    drawScreen(context);
+};
+function drawScreen(context){
+        var gr = context.createRadialGradient(50,50,25,100,100,100);
+        //添加颜色端点
+        gr.addColorStop(0,'rgb(255,0,0)');
+        gr.addColorStop(.5,'rgb(0,255,0)');    
+        gr.addColorStop(1,'rgb(255,0,0)');        
+        //应用fillStyle生成渐变
+        context.strokeStyle = gr;
+        context.arc(100,100,50,(Math.PI/180)*0,(Math.PI/180)*360,false);
+        context.stroke();
+    }
+</script>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'load'</span>,canvasApp,<span class="literal">false</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">canvasApp</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> theCanvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>)</span><br><span class="line">   	<span class="keyword">var</span> context = theCanvas.getContext(<span class="string">"2d"</span>)</span><br><span class="line">    drawScreen(context);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawScreen</span>(<span class="params">context</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> gr = context.createRadialGradient(<span class="number">50</span>,<span class="number">50</span>,<span class="number">25</span>,<span class="number">100</span>,<span class="number">100</span>,<span class="number">100</span>);</span><br><span class="line">        <span class="comment">//添加颜色端点</span></span><br><span class="line">        gr.addColorStop(<span class="number">0</span>,<span class="string">'rgb(255,0,0)'</span>);</span><br><span class="line">        gr.addColorStop(<span class="number">.5</span>,<span class="string">'rgb(0,255,0)'</span>);    </span><br><span class="line">        gr.addColorStop(<span class="number">1</span>,<span class="string">'rgb(255,0,0)'</span>);        </span><br><span class="line">        <span class="comment">//应用fillStyle生成渐变</span></span><br><span class="line">        context.strokeStyle = gr;</span><br><span class="line">        context.arc(<span class="number">100</span>,<span class="number">100</span>,<span class="number">50</span>,(<span class="built_in">Math</span>.PI/<span class="number">180</span>)*<span class="number">0</span>,(<span class="built_in">Math</span>.PI/<span class="number">180</span>)*<span class="number">360</span>,<span class="literal">false</span>);</span><br><span class="line">        context.stroke();</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;canvas id="canvas" width="500" height="500"&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>canvas&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/vscode-keys/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/vscode-keys/" itemprop="url">vscode-keys</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T17:55:46+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>记忆</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ctrl + D 选中多同一个变量名</span><br><span class="line"><span class="keyword">shft </span>+ ⬆ <span class="keyword">or </span>⬇ 复制到上一行</span><br><span class="line">alt + ⬆ <span class="keyword">or </span>⬇ 切换位置</span><br><span class="line">F2 重命名</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/redux-saga/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/redux-saga/" itemprop="url">redux-saga 无法触发 takeEvery 事件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T17:55:46+08:00">
+                2019-04-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch(&#123; <span class="attr">type</span>: <span class="string">'action'</span>, payload &#125;)</span><br></pre></td></tr></table></figure>
+<p>状态应这样发出</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/08/oh-my-zsh/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/08/oh-my-zsh/" itemprop="url">source ~/.zshrc  autoload: command not found</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-08T17:55:46+08:00">
+                2019-04-08
               </time>
             
 
@@ -371,247 +753,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/12/vscode-keys/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/12/vscode-keys/" itemprop="url">vscode-keys</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T15:46:15+08:00">
-                2018-11-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>记忆</p>
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ctrl + D 选中多同一个变量名</span><br><span class="line"><span class="keyword">shft </span>+ ⬆ <span class="keyword">or </span>⬇ 复制到上一行</span><br><span class="line">alt + ⬆ <span class="keyword">or </span>⬇ 切换位置</span><br><span class="line">F2 重命名</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/09/redux-saga/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/09/redux-saga/" itemprop="url">redux-saga 无法触发 takeEvery 事件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-09T18:24:46+08:00">
-                2018-11-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dispatch(&#123; <span class="attr">type</span>: <span class="string">'action'</span>, payload &#125;)</span><br></pre></td></tr></table></figure>
-<p>状态应这样发出</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/request-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -641,9 +782,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-03-06T00:00:00+08:00">
                 2018-03-06
               </time>
             
@@ -777,9 +918,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-28T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-28T00:00:00+08:00">
                 2017-12-28
               </time>
             
@@ -898,9 +1039,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-26T00:00:00+08:00">
                 2017-12-26
               </time>
             
@@ -1028,9 +1169,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-25T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-25T00:00:00+08:00">
                 2017-12-25
               </time>
             
@@ -1159,9 +1300,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-20T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-12-20T00:00:00+08:00">
                 2017-12-20
               </time>
             
@@ -1342,9 +1483,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Posted on</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-26T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-26T00:00:00+08:00">
                 2017-07-26
               </time>
             
@@ -1473,161 +1614,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/07/21/leancloud-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/21/leancloud-01/" itemprop="url">初用 LeanCloud - 新建一个对象</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T00:00:00+08:00">
-                2017-07-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> Todo = AV.Object.extend(<span class="string">'Todo'</span>);</span><br><span class="line"><span class="comment">// Todo 代表要在哪张数据表里新建一条数据</span></span><br><span class="line"><span class="keyword">const</span> todo = <span class="keyword">new</span> Todo();</span><br><span class="line"><span class="comment">// 设置名称</span></span><br><span class="line">todo.set(<span class="string">'name'</span>,<span class="string">'工作'</span>);</span><br><span class="line"><span class="comment">// 'name' 代表你要保存到哪个属性中， '工作'：值</span></span><br><span class="line">todo.save().then(<span class="function"><span class="keyword">function</span> (<span class="params">todo</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'objectId is '</span> + todo.id);</span><br><span class="line">  &#125;, <span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.error(error);</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
-<p>创建完成后，打开 控制台 &gt; 存储，点开 Todo ，就可以看到刚才添加的数据。</p>
-<table>
-<thead>
-<tr>
-<th>参数</th>
-<th style="text-align:right">必须</th>
-<th style="text-align:right">说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>内置属性</td>
-<td style="text-align:right">类型</td>
-<td style="text-align:right">描述</td>
-</tr>
-<tr>
-<td>objectId</td>
-<td style="text-align:right">String</td>
-<td style="text-align:right">该对象唯一的 Id 标识</td>
-</tr>
-<tr>
-<td>ACL    ACL    该对象的权限控制，实际上是一个 JSON 对象，控制台做了展现优化。</td>
-</tr>
-<tr>
-<td>createdAt</td>
-<td style="text-align:right">Date</td>
-<td style="text-align:right">该对象被创建的 UTC 时间</td>
-</tr>
-<tr>
-<td>updatedAt</td>
-<td style="text-align:right">Date</td>
-<td style="text-align:right">该对象最后一次被修改的时间</td>
-</tr>
-</tbody>
-</table>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1678,8 +1664,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">41</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -1690,10 +1676,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
+                
                   <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
+                  <span class="site-state-item-name">tags</span>
+                
               </div>
             
 
@@ -1738,7 +1724,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -1746,7 +1732,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
