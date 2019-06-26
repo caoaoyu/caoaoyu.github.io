@@ -249,6 +249,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/git-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/16/git-01/" itemprop="url">Git-坑-1</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T00:00:00+08:00">
+                2017-03-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>错误 ：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">warning: LF will be replaced by CRLF <span class="keyword">in</span> index.php.</span><br><span class="line">The file will have its original line endings <span class="keyword">in</span> your working directory.</span><br></pre></td></tr></table></figure>
+<p>解决：</p>
+<p>这个警告是自动替换的一个选项<br>命令: <figure class="highlight plain"><figcaption><span>git config --global core.autocrlf  false```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">错误：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">$ git push origin</span><br><span class="line">fatal: The current branch master has no upstream branch.</span><br><span class="line">To push the current branch and set the remote as upstream, use</span><br></pre></td></tr></table></figure></p>
+<p>解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --<span class="built_in">set</span>-upstream origin master</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/bootstrap/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -348,388 +473,6 @@ window.onload =function() {
         align-items: center;
     }
 </style>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/16/django/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/16/django/" itemprop="url">Django-error-01</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-16T00:00:00+08:00">
-                2017-03-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'dist/style/main.css'</span> could <span class="keyword">not</span> be found</span><br></pre></td></tr></table></figure>
-<p>解决：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATICFILES_DIRS =( os.path.join(BASE_DIR, <span class="string">'static'</span>), )</span><br></pre></td></tr></table></figure></p>
-<p>看看这句写对了没。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AttributeError: <span class="string">'module'</span> object has no attribute ‘login<span class="string">'</span></span><br></pre></td></tr></table></figure></p>
-<p>解决：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 定义看看哪里是不是有错</span></span><br></pre></td></tr></table></figure></p>
-<!-- django 模板 python：语法
-元组：key:value
-
-```python
-text = {}
-text[‘list’] = [
-    (‘msg1’,’内容1’ ),
-    ( ‘msg2’,’内容2’ ),
-    ( ‘msg3’,’内容3’ )]
-``` -->
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
-<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
-<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/bootstrap-tree-01/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Aoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小小鱼的小小梦想">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/03/10/bootstrap-tree-01/" itemprop="url">bootstrap 的 tree 扩展插件</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>安装:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install bootstrap-treeview</span><br></pre></td></tr></table></figure></p>
-<p>引入:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href = <span class="string">"bootstrap.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">&lt;!-- Required Javascript --&gt;</span><br><span class="line">&lt;script src = <span class="string">"jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src = <span class="string">"bootstrap-treeview.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">数据排序:</span></span><br><span class="line"><span class="string">var list = [</span></span><br><span class="line"><span class="string">    &#123;did:1,fid:0,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点</span></span><br><span class="line"><span class="string">    &#123;did:1.1,fid:1,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点目录，父节点</span></span><br><span class="line"><span class="string">    &#123;uid:1,did:1.1,realname:''&#125;,</span></span><br><span class="line"><span class="string">    //子节点</span></span><br></pre></td></tr></table></figure></p>
-<p>bootatrap tree 会把一些字符给”吃掉”</p>
-<h5 id="生成树状图"><a href="#生成树状图" class="headerlink" title="生成树状图:"></a>生成树状图:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#tree'</span>).treeview(&#123;</span><br><span class="line">  data: tree,<span class="comment">// tree 数据</span></span><br><span class="line">  enableLinks: <span class="literal">true</span>,<span class="comment">//启用a链接</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p><code>javascript enableLinks: true</code><br>这个就是如果有链接，就需要开启这个，不然的话不能点击</p>
-<p>想再自定义事件没有 class ，没有 ID 怎么办？，开源的东西动源码呀~也不难，在生成的标签中 attr ID = XX就可以了嘛~</p>
-<p>over~</p>
-
           
         
       
@@ -1004,6 +747,285 @@ text[‘list’] = [
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/popover-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/popover-01/" itemprop="url">弹出框</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>弹出框是为任意元素添加一小块浮层,就像iPad上一样,用于存放非主要信息.弹出框的标题和内容的长度都是零的话将永远不会被显示出来.</p>
+<p>插件依赖<br>加载顺序不可错</p>
+<p>例:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'./../../node_modules/bootstrap/js/tooltip.js'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./../../node_modules/bootstrap/js/popover.js'</span>);</span><br></pre></td></tr></table></figure>
+<p>初始化<br>由于性能的原因,工具提示和弹出框的 data 编程接口（data api）是必须要手动初始化的.</p>
+<p>在一个页面上一次性初始化所有弹出框的方式是通过 data-toggle 属性选中他们:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'[data-toggle="popover"]'</span>).popover()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>用法<br>通过 JavaScript 代码启动弹出框:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<!-- 名称    类型    默认值    描述
+animation    boolean    true    为弹出框赋予淡出的 CSS 动画效果
+container    string false    false    向指定元素追加弹出框。实例： container: ‘body’
+delay    number object    0    延迟显示和隐藏弹出框的毫秒数-对manual手动触发类型不适用。如果提供的是一个数字，那么延迟将会应用于显示和隐藏。
+html    boolean    false    向弹出框插入 HTML。如果为 false，jQuery 的 text方法将被用于向 dom 插入内容。如果您担心 XSS 攻击，请使用 text。
+placement    string function    right    规定如何定位弹出框(即top/bottom/left/right/auto)当指定为 auto 时，会动态调整弹出框。例如，如果 placement是”autoleft”，弹出框将会尽可能显示在左边，在情况不允许的情况下它才会显示在右边。
+selector    string    false    如果提供了一个选择器,气泡框对象将被委派到指定的目标.在实践中,这用来启用动态HTML内容添加
+template    string    
+气泡框的标题将注入.popover 标题.气泡框的内容将被注入.popover 内容..arrow 将成为气泡框的箭头.最外层包装元素应该有.popover 类.
+title string    function    ‘’    如果标题属性不存在,默认标题值.如果给出一个函数,它将调用其这引用设置为气泡框附加到的元素.
+trigger    string    ‘click’    触发:click hover focus manual.
+viewport    string    object function{selector:’body’,padding:0}    保持此元素的边界内气泡框.如果给出一个函数,它叫做与触发元素 DOM 节点作为其唯一参数.这种情况下设置为气泡框实例.
+content    string function    ‘ ‘    默认内容,如果data-content不存在.如果给出一个函数,它将调用其这引用设置为气泡框附加到的元素.
+方法
+方法    描述    实例
+Options: .popover(options)    向元素集合附加弹出框句柄。    $().popover(options)
+Toggle: .popover(‘toggle’)    切换显示/隐藏元素的弹出框    $(‘#ID’).popover(‘toggle’)
+Show: .popover(‘show’)    显示元素的弹出框    $(‘#ID’).popover(‘show’)
+Hide: .popover(‘hide’)    隐藏元素的弹出框    $(‘#ID’).popover(‘hide’)
+Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#ID’).popover(‘destroy’)
+默认触发时间是click,点击就会触发事件,不想自动触发事件设置 data-trigger=”manual” 手动触发 -->
+<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在<span class="keyword">input</span>中应用</span><br></pre></td></tr></table></figure>
+<p>data-toggle=”popover” //锚点<br>data-trigger=”focus” //触发时间<br>data-content=”You are my sunshine” //气泡内容<br>例：</p>
+<p><input type="text" class="form-control" data-trigger="manual" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" 结束时间必须大于开始时间" id="dM" placeholder="请选择日期" value=""><br> <code>`</code></p>
+<p>等属性复制过去就好。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/bootstrap-tree-01/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小小鱼的小小梦想">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/03/10/bootstrap-tree-01/" itemprop="url">bootstrap 的 tree 扩展插件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-10T00:00:00+08:00">
+                2017-03-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>安装:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bower install bootstrap-treeview</span><br></pre></td></tr></table></figure></p>
+<p>引入:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;link href = <span class="string">"bootstrap.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br><span class="line">&lt;!-- Required Javascript --&gt;</span><br><span class="line">&lt;script src = <span class="string">"jquery.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script src = <span class="string">"bootstrap-treeview.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line"><span class="string">``</span><span class="string">`javascript</span></span><br><span class="line"><span class="string">数据排序:</span></span><br><span class="line"><span class="string">var list = [</span></span><br><span class="line"><span class="string">    &#123;did:1,fid:0,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点</span></span><br><span class="line"><span class="string">    &#123;did:1.1,fid:1,text:''&#125;,</span></span><br><span class="line"><span class="string">    //根节点目录，父节点</span></span><br><span class="line"><span class="string">    &#123;uid:1,did:1.1,realname:''&#125;,</span></span><br><span class="line"><span class="string">    //子节点</span></span><br></pre></td></tr></table></figure></p>
+<p>bootatrap tree 会把一些字符给”吃掉”</p>
+<h5 id="生成树状图"><a href="#生成树状图" class="headerlink" title="生成树状图:"></a>生成树状图:</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#tree'</span>).treeview(&#123;</span><br><span class="line">  data: tree,<span class="comment">// tree 数据</span></span><br><span class="line">  enableLinks: <span class="literal">true</span>,<span class="comment">//启用a链接</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>javascript enableLinks: true</code><br>这个就是如果有链接，就需要开启这个，不然的话不能点击</p>
+<p>想再自定义事件没有 class ，没有 ID 怎么办？，开源的东西动源码呀~也不难，在生成的标签中 attr ID = XX就可以了嘛~</p>
+<p>over~</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/gulp-webpack-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -1130,7 +1152,7 @@ text[‘list’] = [
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/popover-01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/10/scroll-01/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Aoyo">
@@ -1149,7 +1171,7 @@ text[‘list’] = [
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/03/10/popover-01/" itemprop="url">弹出框</a></h1>
+                <a class="post-title-link" href="/2017/03/10/scroll-01/" itemprop="url">固定右侧边栏</a></h1>
         
 
         <div class="post-meta">
@@ -1201,40 +1223,11 @@ text[‘list’] = [
       
         
           
-            <p>弹出框是为任意元素添加一小块浮层,就像iPad上一样,用于存放非主要信息.弹出框的标题和内容的长度都是零的话将永远不会被显示出来.</p>
-<p>插件依赖<br>加载顺序不可错</p>
-<p>例:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">'./../../node_modules/bootstrap/js/tooltip.js'</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">'./../../node_modules/bootstrap/js/popover.js'</span>);</span><br></pre></td></tr></table></figure>
-<p>初始化<br>由于性能的原因,工具提示和弹出框的 data 编程接口（data api）是必须要手动初始化的.</p>
-<p>在一个页面上一次性初始化所有弹出框的方式是通过 data-toggle 属性选中他们:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">'[data-toggle="popover"]'</span>).popover()</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>用法<br>通过 JavaScript 代码启动弹出框:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<!-- 名称    类型    默认值    描述
-animation    boolean    true    为弹出框赋予淡出的 CSS 动画效果
-container    string false    false    向指定元素追加弹出框。实例： container: ‘body’
-delay    number object    0    延迟显示和隐藏弹出框的毫秒数-对manual手动触发类型不适用。如果提供的是一个数字，那么延迟将会应用于显示和隐藏。
-html    boolean    false    向弹出框插入 HTML。如果为 false，jQuery 的 text方法将被用于向 dom 插入内容。如果您担心 XSS 攻击，请使用 text。
-placement    string function    right    规定如何定位弹出框(即top/bottom/left/right/auto)当指定为 auto 时，会动态调整弹出框。例如，如果 placement是”autoleft”，弹出框将会尽可能显示在左边，在情况不允许的情况下它才会显示在右边。
-selector    string    false    如果提供了一个选择器,气泡框对象将被委派到指定的目标.在实践中,这用来启用动态HTML内容添加
-template    string    
-气泡框的标题将注入.popover 标题.气泡框的内容将被注入.popover 内容..arrow 将成为气泡框的箭头.最外层包装元素应该有.popover 类.
-title string    function    ‘’    如果标题属性不存在,默认标题值.如果给出一个函数,它将调用其这引用设置为气泡框附加到的元素.
-trigger    string    ‘click’    触发:click hover focus manual.
-viewport    string    object function{selector:’body’,padding:0}    保持此元素的边界内气泡框.如果给出一个函数,它叫做与触发元素 DOM 节点作为其唯一参数.这种情况下设置为气泡框实例.
-content    string function    ‘ ‘    默认内容,如果data-content不存在.如果给出一个函数,它将调用其这引用设置为气泡框附加到的元素.
-方法
-方法    描述    实例
-Options: .popover(options)    向元素集合附加弹出框句柄。    $().popover(options)
-Toggle: .popover(‘toggle’)    切换显示/隐藏元素的弹出框    $(‘#ID’).popover(‘toggle’)
-Show: .popover(‘show’)    显示元素的弹出框    $(‘#ID’).popover(‘show’)
-Hide: .popover(‘hide’)    隐藏元素的弹出框    $(‘#ID’).popover(‘hide’)
-Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#ID’).popover(‘destroy’)
-默认触发时间是click,点击就会触发事件,不想自动触发事件设置 data-trigger=”manual” 手动触发 -->
-<figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">在<span class="keyword">input</span>中应用</span><br></pre></td></tr></table></figure>
-<p>data-toggle=”popover” //锚点<br>data-trigger=”focus” //触发时间<br>data-content=”You are my sunshine” //气泡内容<br>例：</p>
-<p><input type="text" class="form-control" data-trigger="manual" data-container="body" data-toggle="popover" data-placement="bottom" data-content=" 结束时间必须大于开始时间" id="dM" placeholder="请选择日期" value=""><br> <code>`</code></p>
-<p>等属性复制过去就好。</p>
+            <p>需求：右侧栏固定，并且不能挡到下面 div<br><!-- 右侧宽度自适应 begin--><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//需要先计算距离导航顶部的距离，以免浮动导致飘出</span></span><br><span class="line">    <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">        <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">            $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h4><p>计算屏幕宽度，移动端可不需要浮动了，所以在这里需要做个判断<br><figure class="highlight plain"><figcaption><span>>992? $('.right-sidebar').addClass('tag'):$('.right-sidebar').removeClass('tag');```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">当页面宽度一改变，就进行距离左边距距离的判断</span><br><span class="line">```javascript</span><br><span class="line">var leftAdaptive = $(&apos;.a-st&apos;).width()+30+$(&apos;.a-st&apos;).offset().left;</span><br><span class="line">       window.onresize = function () &#123;</span><br><span class="line">           var $elm = $(&apos;.sidebar&apos;);</span><br><span class="line">           $(window).width() &gt;992? $elm.addClass(&apos;tag&apos;):$elm.removeClass(&apos;tag&apos;);</span><br><span class="line">           Adaptive();</span><br><span class="line">   &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>当屏幕宽度肯定不是手机了~浮动 begin~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">    $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>右侧栏宽高可不是固定的，那就要根据长短来进行计算什么时候滑动条到什么高度才可移动不然太长了可是会覆盖到下面的 div的哦~<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> sidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line"><span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-bottom"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">        $elm.removeClass(<span class="string">"right-top"</span>)</span><br><span class="line">        $elm.addClass(<span class="string">"right-bottom"</span>);</span><br><span class="line">        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">short(Sidebar)</span><br></pre></td></tr></table></figure></p>
+<p>3、最后<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 右侧宽度自适应 begin--&gt;</span><br><span class="line">    <span class="comment">//判断屏幕宽度</span></span><br><span class="line">    $(<span class="built_in">window</span>).width() &gt;<span class="number">992</span>? $(<span class="string">'.right-sidebar'</span>).addClass(<span class="string">'tag'</span>):$(<span class="string">'.right-sidebar'</span>).removeClass(<span class="string">'tag'</span>);</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Adaptive</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> $elm = $(<span class="string">'.sidebar'</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算距离导航顶部的距离</span></span><br><span class="line">        <span class="keyword">var</span> startPos = $elm.offset().top;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//计算左边距</span></span><br><span class="line">        <span class="keyword">var</span> leftAdaptive = $(<span class="string">'.a-st'</span>).width()+<span class="number">30</span>+$(<span class="string">'.a-st'</span>).offset().left;</span><br><span class="line">       <span class="comment">//当屏幕宽度肯定不是手机了~浮动 begin~</span></span><br><span class="line">        <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">            $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span> ($(<span class="built_in">window</span>).width() &lt; <span class="number">992</span>)&#123;</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">            $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">            $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//浮动肯定的一点就是，要根据 Scroll 来浮动，造成"固定"的现象</span></span><br><span class="line">        $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>($(<span class="string">'.sidebar'</span>).hasClass(<span class="string">'tag'</span>) == <span class="literal">true</span> )&#123;</span><br><span class="line">                <span class="keyword">var</span> leftHeight = $(<span class="string">'.a-ts'</span>).height();</span><br><span class="line">                <span class="keyword">var</span> sidebarHeight = $elm.height();</span><br><span class="line">                <span class="keyword">var</span> scroll = $(<span class="built_in">window</span>).scrollTop();</span><br><span class="line">                <span class="keyword">var</span> longSidebar = scroll+(sidebarHeight - <span class="number">200</span>);</span><br><span class="line">                <span class="function"><span class="keyword">function</span> <span class="title">short</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">if</span> (scroll &lt;= startPos) &#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span> (num &gt;= leftHeight)&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-bottom"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.removeAttr(<span class="string">'style'</span>);</span><br><span class="line">                    &#125; <span class="keyword">else</span>&#123;</span><br><span class="line">                        $elm.removeClass(<span class="string">"right-nav-top"</span>)</span><br><span class="line">                        $elm.addClass(<span class="string">"right-nav-bottom"</span>);</span><br><span class="line">                        $(<span class="string">".right-nav-bottom"</span>).css(<span class="string">"left"</span>,leftAdaptive)</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                sidebarHeight &gt; <span class="number">700</span>? short(longSidebar):short(shortSidebar);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure></p>
 
           
         
@@ -1949,15 +1942,6 @@ Destroy: .popover(‘destroy’)    隐藏并销毁元素的弹出框    $(‘#I
 
             
 
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">23</span>
-                  <span class="site-state-item-name">tags</span>
-                
-              </div>
             
 
           </nav>
